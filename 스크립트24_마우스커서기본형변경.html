@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 커서 기본형 변경</title>
+    <link rel="stylesheet" href="css/스크립트24.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+          $(function(){
+            //1. 마우스 커서 위치 적용
+            //화면에서 마우스 움직일 때 실행
+            //.corsor가 x,y축으로 따라 움직임.
+            $(window).on('mousemove',function(e){
+                let mouseX = e.pageX;
+                let mouseY = e.pageY;
+                
+                console.log(mouseX)
+                console.log(mouseY)
+
+                $('.cursor').css({
+                    'left' : mouseX,
+                    'top' : mouseY
+                });
+            });
+
+            
+            //2.
+            //.item에게 마우스 올렸을 때 .cursor에게 클래스명 .scale 추가
+            //css파일에서 .cursor에게.scale 가로크기와 세로크기 변화 (css파일에 작성)
+
+            $('.item').on('mouseenter', function(){
+                $('.cursor').addClass('scale'); 
+                /* addclass이므로 'scale'에 .을 붙일필요x */
+            });
+
+            $('.item').on('mouseleave', function(){
+                $('.cursor').removeClass('scale'); 
+                /* addclass이므로 'scale'에 .을 붙일필요x */
+            });
+
+
+
+        });//script end
+    </script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div id="wrap">
+        <header class="header">헤더</header>
+        <main class="main">
+            <div class="item">
+                <a href="#">
+                    <img src="img/img-4.jpg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente perferendis nostrum ex, odio totam voluptatem exercitationem numquam fugiat quisquam consequatur. 
+                        Esse debitis vero ratione atque porro sunt maxime consequuntur. Itaque.</p>
+                </a>
+            </div><!-- item -->
+        </main><!-- main -->
+    </div><!-- wrap -->
+    
+    
+</body>
+</html>
