@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.cursor {
+width: 70px;
+height: 70px;
+position: absolute;
+top: 0;
+left: 0;
+transform: translate(-50%, -50%);
+pointer-events: none; /* 헤더에 고정되어있던 .cursor가 마우스이동에 따라 움직임 */
+}
+
+.cursor .in {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 166);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: 0.5s; /* 부드럽게 나타나고 사라지기 */
+}
+
+.cursor.active .in {
+    transform: scale(1);
+}
+
+.header {
+    height: 100px;
+    background-color: rgb(164, 219, 156);
+}
+
+img {
+    width: 500px;
+    margin: 100px auto;
+    display: block; 
+    /* img는 인라인태그 */
+    cursor: none;
+}

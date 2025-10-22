@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 커서</title>
+    <link rel="stylesheet" href="css/스크립트23.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function(){
+
+            //화면에서 마우스 움직일 때 실행
+            //.corsor가 x,y축으로 따라 움직임.
+            $(window).on('mousemove',function(e){
+                let mouseX = e.pageX;
+                let mouseY = e.pageY;
+                
+                console.log(mouseX)
+                console.log(mouseY)
+                $('.cursor').css({
+                    'left' : mouseX,
+                    'top' : mouseY
+                });
+            });
+
+            //img에게 마우스를 올렸을 때 실행
+            //.cursor에게 클래스명 active 추가
+            $('img').on('mouseenter', function () {
+                $('.cursor').addClass('active');
+            });
+
+            //img에게 마우스를 벗어났을 때 실행
+            //.cursor에게 클래스명 active 삭제
+             $('img').on('mouseleave', function () {
+                $('.cursor').removeClass('active');
+            });
+
+
+
+        });//script end
+    </script>
+</head>
+
+<body>
+    <div class="cursor">
+        <div class="in">
+            <span>view</span>
+        </div><!-- in -->
+    </div><!-- cursor -->
+
+    <div id="wrap">
+        <header class="header">header</header>
+        <main class="main">
+            <img src="img/img-10.jpg" alt="">
+        </main><!-- main -->
+    </div><!-- wrap -->
+
+
+</body>
+
+</html>
