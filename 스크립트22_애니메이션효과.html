@@ -5,6 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>애니메이션효과</title>
     <link rel="stylesheet" href="css/스크립트22.css">
+
+    <!-- script파일 연결순서 *중요 -->
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script src="lib/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+            $('.hide').on('click',function(){
+                $(this).siblings('.image').hide();
+                //.hide의 하위 선택자인 .image를~
+            });//hide
+
+            $('.show').on('click',function(){
+                $(this).siblings('.image').show();
+            });//show
+
+            $('.fadeIn').on('click',function(){
+                $(this).siblings('.image').fadeIn();
+            });//fadeIn
+
+            $('.fadeOut').on('click',function(){
+                $(this).siblings('.image').fadeOut();
+            });//fadeOut
+
+            $('.slideUp').on('click',function(){
+                $(this).siblings('.image').slideUp();
+            });//slideUp
+
+            $('.slideDown').on('click',function(){
+                $(this).siblings('.image').slideDown();
+            });//slideDown
+            
+            $('.toggle').on('click',function(){
+                $(this).siblings('.image').toggle();
+            });//toggle
+
+            $('.fadeToggle').on('click',function(){
+                $(this).siblings('.image').fadeToggle(500, 'easeInBounce');
+            });//fadeToggle
+
+            $('.slideToggle').on('click',function(){
+                $(this).siblings('.image').slideToggle(500, 'easeInBounce');
+            });//slideToggle
+
+            $('.animate').on('click',function(){
+                $(this).siblings('.image').animate({
+                    'left' : '500px'
+                },1000, 'easeInOutBounce');
+                    /* 왼쪽에서 500px떨어져 오른쪽으로 이동 */
+                    /* position:relative가 작성되어있기때문에 left가 적용되는것임. 필수! */
+            });//animate
+            
+        });//script end
+    </script>
 </head>
 <body>
     <div class="list">
@@ -50,6 +103,13 @@
             <button type="button" class="slideToggle">slideToggle</button>
             <div class="image">
                 <img src="img/img-6.jpg" alt="">
+            </div><!-- image -->
+        </div><!-- item -->
+
+        <div class="item">
+            <button type="button" class="animate">animate</button>
+            <div class="image">
+                <img src="img/img-7.jpg" alt="">
             </div><!-- image -->
         </div><!-- item -->
 
