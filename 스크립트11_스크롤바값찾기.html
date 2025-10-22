@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤바값찾기</title>
+    <link rel="stylesheet" href="css/스크립트11.css">
+    <script>
+        window.onload = () => {
+
+            let header = document.getElementsByClassName('header')[0];
+
+            window.addEventListener('scroll', () => {
+                // alert(); 알러창 확인 후 주석처리
+                //화면의 세로 스크롤바의 값
+                //window.scrollY;
+                let scrollBar = window.scrollY;
+                //console.log(scrollBar); 콘솔창 확인 후 오류없으면 ok
+
+                //스크롤바의 값이 0보다 크면 실행
+                //alert()
+                /*  if (scrollBar > 0) {
+                     alert();
+                 } */
+
+                //조건문
+                //스크롤바의 값이 200보다 크면 실행
+                //header에게 클래스명 active 추가
+                //조건이 맞지 않으면
+                //header에게 클래스명 active 삭제
+                if (scrollBar > 200) {
+                    header.classList.add('active'); /* 검사창 이용해서 header에 클래스명 active가 붙는지 확인  */
+                } else {
+                    header.classList.remove('active');
+                }
+            });
+        };//script end
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/아이콘/Heart 1.svg" alt="로고">
+                </a>
+            </h1><!-- logo -->
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                </ul><!-- gnb -->
+            </nav><!-- nav -->
+
+            <ul class="util">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+            </ul><!-- util -->
+        </div><!-- inner -->
+    </header><!-- header -->
+
+    <main class="main">
+        <section class="main_visual">
+            <img src="img/img-2.jpg" alt="">
+        </section><!-- main_visual -->
+    </main><!-- main -->
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.section-01{
+    background-image: url(/img/피그마-플렉스-유럽여행/배경img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 164px 0 281px;
+}
+.section-01 .title{
+    text-align: center;
+    margin-bottom: 65px;
+}
+.section-01 .title h1 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 15px;
+}
+.section-01 .title p{
+    color: white;
+}
+.section-01 .list{
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.section-01 .list .item{
+    width: 464px;
+    height: 340px;
+    background-color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 25px;
+    border-radius: 10px;
+
+}
+.section-01 .list .item img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px ;
+}
+.section-01 .list .item .text strong{
+height: 28px;/* strong은 인라인태그라서 height적용이x inline-block을 써준다 */
+background-color: #d3785d;
+border-radius: 50px;
+color: white;
+display: inline-block;
+font-size: 14px;
+padding: 0 12px;
+line-height: 28px;
+margin-bottom: 49px;
+}
+
+.section-01 .list .item .text .item_title h2{
+font-size: 16px;
+}
+.section-01 .list .item .text .item_title p{
+    font-size: 14px;
+}

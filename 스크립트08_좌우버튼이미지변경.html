@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼이미지변경</title>
+    <link rel="stylesheet" href="css/스크립트08.css">
+    <script>
+        window.onload = () => {
+            let box = document.getElementsByClassName('box')[0];
+            let boxImage = document.getElementsByTagName('img')[0];
+            let boxPrev = document.getElementsByClassName('prev')[0];
+            let boxNext = document.getElementsByClassName('next')[0];
+            let boxNum = document.getElementsByClassName('num')[0];
+            let boxALLNum = document.getElementsByClassName('all_num')[0];
+
+            let i = 0;
+            let imageList = ['img/img-4.jpg', 'img/img-5.jpg', 'img/img-6.jpg', 'img/img-7.jpg']
+            //다음 버튼을 클릭했을 때 실행
+            //1씩 증가시켜주기
+            // img의 src값을 변수 imageList의 index(순서)값으로 나올 수 있도록 작성
+
+            // length => 개수, 길이 구하기
+            console.log(imageList.length)
+
+            //전체 이미지 수 작성 => .all_num
+            //innerHTML
+            //boxALLNum.innerHTML = '/' + imageList.length
+            // +로 숫자와 문자를 이어준다. 문자는 ''사이에 작성
+            boxALLNum.innerHTML = '<b>/</b>' + imageList.length
+            
+            boxNext.addEventListener('click', () => {
+                //alert()
+                i++;
+                //console.log(i);
+                //i값이 1, 2, 3...
+                //imageList[1] //imageList에 있는 두번째 이미지파일
+                //imageList[2]
+                //imageList[i]
+
+                /* i값이 4보다 크거나 같을 때 같을 때 (>=)
+                i값은 0 */
+                if (i >= imageList.length) {
+                    i = 0;
+                }
+
+                //img의 src값을 변수명imageList가 가지는 값 순서대로 불러오도록 제작
+                boxImage.src = imageList[i];
+
+                //.num에게 다음 버튼 크릭 시 숫자값 변경/1, 2, 3, 4..
+                boxNum.innerHTML = i + 1;
+
+                boxPrev.addEventListener('click', () => {
+                    //alert()
+                    i--;
+                    //console.log(i);
+                    if (i < 0) {
+                        i = imageList.length - 1; /* 이미지는 4장이지만 인덱스값은 3까지 존재하므로 */
+                    }
+                    boxImage.src = imageList[i];
+                    boxNum.innerHTML = i + 1;
+                });
+            });
+        };//script end
+
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/img-4.jpg" alt="">
+
+        <div class="btn">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div><!-- btn -->
+
+        <div class="page">
+            <span class="num">1</span>
+            <span class="all_num"></span>
+        </div><!-- page -->
+    </div><!-- box -->
+</body>
+
+</html>

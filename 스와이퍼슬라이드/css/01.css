@@ -1,0 +1,32 @@
+@charset "utf-8";
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.section-02{
+    width:500px;
+    height: 500px;
+}
+.section-02 .swiper-slide{
+    height: 500px;
+}
+.section-02 .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 슬라이드버튼 색상 변경 */
+.section-02 .swiper-button-next,
+.section-02 .swiper-button-prev{
+    color:white;
+}

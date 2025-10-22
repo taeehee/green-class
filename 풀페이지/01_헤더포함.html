@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더 포함</title>
+    <link rel="stylesheet" href="lib/fullpage.min.css"> <!-- css파일은 link로 연결 -->
+    <link rel="stylesheet" href="css/01.css">
+
+    <script src="lib/fullpage.extensions.min.js"></script> <!-- js파일은 script로 연결 -->
+    <script>
+        window.onload = () => {
+            var myFullpage = new fullpage('#fullpage', {
+        //sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        navigation:true,
+        navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
+        showActiveTooltip: true,
+        //menu: '#menu'
+    });
+        };
+    </script>
+</head>
+<body>
+    <div id="fullpage">
+        <header class="header">
+            <p>헤더</p>
+        </header><!-- header -->
+    <div class="section" id="section0">
+        <div class="intro">
+          <h1>Section 1</h1>
+          <p>
+            Use the `navigationTooltips` option to use a text for each of the bullets in the navigation element.
+          </p>
+        </div><!-- intro -->
+    </div><!-- section -->
+    <section class="section" id="section1">
+        <div class="inner">
+            <h2>두번째 섹션</h2>
+            <div class="list">
+                <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur, porro, corporis consequuntur vero placeat perferendis modi, explicabo provident beatae facilis recusandae officia neque! Accusamus modi debitis iure tempore fuga?</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur, porro, corporis consequuntur vero placeat perferendis modi, explicabo provident beatae facilis recusandae officia neque! Accusamus modi debitis iure tempore fuga?</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur, porro, corporis consequuntur vero placeat perferendis modi, explicabo provident beatae facilis recusandae officia neque! Accusamus modi debitis iure tempore fuga?</p>
+                </div><!-- item -->
+
+                <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequatur, porro, corporis consequuntur vero placeat perferendis modi, explicabo provident beatae facilis recusandae officia neque! Accusamus modi debitis iure tempore fuga?</p>
+                </div><!-- item -->
+            </div><!-- list -->
+        </div><!-- inner -->
+        
+    </section><!-- section -->
+
+    <div class="section" id="section2">
+        <div class="inner">
+            <div class="item">
+                <div class="image">
+                    <img src="img/img-3.jpg" alt="">
+                </div><!-- image -->
+                <strong>item 1</strong>
+            </div><!-- item -->
+            
+            <div class="item">
+                <div class="image">
+                    <img src="img/img-4.jpg" alt="">
+                </div><!-- image -->
+                <strong>item 2</strong>
+            </div><!-- item -->
+
+            <div class="item">
+                <div class="image">
+                    <img src="img/img-5.jpg" alt="">
+                </div><!-- image -->
+                <strong>item 3</strong>
+            </div><!-- item -->
+
+            <div class="item">
+                <div class="image">
+                    <img src="img/img-6.jpg" alt="">
+                </div><!-- image -->
+                <strong>item 4</strong>
+            </div><!-- item -->
+
+        </div><!-- inner -->
+    </div><!-- section -->
+
+    <footer class="footer section fp-auto-height" id="footer">
+        <p>푸터</p>
+    </footer><!-- footer -->
+
+</div><!-- #fullpage end -->
+</body>
+</html>
+

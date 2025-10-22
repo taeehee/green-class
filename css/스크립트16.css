@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import url(reset.css);
+
+.section {
+    background: url('../img/img-1.jpg') center center / cover no-repeat;
+    padding: 100px 0;
+}
+.section .inner {
+    max-width: 1200px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* h3을 고정시키기위해 부모에 flex-star지정 */
+}
+.section .inner h3 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    position: sticky;
+    top: 100px;
+}
+
+.section .inner .list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.section .inner .list .item {
+    width: 300px;
+    background-color: #fff;
+    padding: 30px;
+}
+.section .inner .list .item img.item_image {
+    display: none;
+}
+.section .inner .list .item .text {}
+.section .inner .list .item .text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.section .inner .list .item .text p {}

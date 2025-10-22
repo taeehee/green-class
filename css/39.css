@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.mobile {
+    display: none;
+    /* 데스크탑ver에서 mobile.ver은 보이지않도록 */
+}
+
+.header {
+    height: 100px;
+    border-bottom: 1px solid #333;
+}
+
+.header .inner {
+    height: 100%;
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    /* 양쪽마진20이라서 -40px */
+    margin: 0 auto;
+    /* 의미가 있나? */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* 네비게이션 기준으로 정렬되어 로고가 헤더영역을 벗어나게 됨. so, h값을 부여 */
+}
+
+.header .inner .logo {
+    height: 60px;
+}
+
+.header .inner .logo a {
+    height: 100%;
+    display: block;
+    /* a는 인라인태그이므로 block을 주고 h값 설정 */
+
+}
+
+.header .inner .logo a img {
+    /* 로고,아이콘 img에는 w또는 h값 1개만 준다 */
+    height: 100%;
+}
+
+.header .inner .nav_pc .gnb {
+    display: flex;
+}
+
+.header .inner .nav_pc .gnb>li {
+    position: relative;
+}
+
+.header .inner .nav_pc .gnb>li:hover .depth-02 {
+    display: block;
+    /* li에 호버했을때 depth-02가 나타남 */
+}
+
+.header .inner .nav_pc .gnb>li .depth-01 {
+    /* a태그이기때문에 크기조절이x. so, diplay:block부여 */
+    display: block;
+    line-height: 100px;
+    padding: 0 40px;
+}
+
+.header .inner .nav_pc .gnb>li .depth-02 {
+    width: 100%; /* w값 놓침 */
+    position: absolute;
+    top: 100px;
+    /* header 높이값만큼 내려준다 */
+    left: 0;
+    border: 1px solid #333;
+    text-align: center;
+    display: none;
+    /* 호버했을때 나타나게하기위해 숨김 */
+    /* padding: 0 32px; 사용x */
+    /* white-space: nowrap; 사용x */
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+    /* 화면이 1024 이하일때 */
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .header .inner .nav_btn {
+        border: 0;
+        background-color: transparent;
+        height: 40px;
+    }
+
+
+    .header .inner .nav_mobile {
+        width: 80%;
+        height: 100%;
+        position: fixed;
+        right: -100%;
+        top: 0px;
+        background-color: rgb(255, 209, 255);
+
+        transition: right 0.7s;
+    }
+
+    .header .inner .nav_mobile.active {
+        right: 0%;
+    }
+
+}
+
+/* 1024 */

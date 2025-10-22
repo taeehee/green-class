@@ -1,0 +1,132 @@
+@charset "usf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body{
+    height: 3000px;
+}
+.position{
+    width: 400px;
+    height: 400px;
+    background-color: aqua;
+    margin: 50px auto;
+    position: relative;
+    top: 150px;
+    
+}
+.position div{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+.position div:nth-child(1){
+    background-color: antiquewhite;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+/* top, right, left, bottom */
+.position div:nth-child(2){
+    background-color: antiquewhite;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.position div:nth-child(3){
+    background-color: yellow;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+}
+.position div:nth-child(4){
+    background-color: antiquewhite;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.position div:nth-child(5){
+    background-color: yellow;
+    position: absolute;
+    top: -100px;
+    left: 0;
+}
+.position div:nth-child(6){
+    background-color: blue;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+}
+.position div:nth-child(7){
+    background-color: orange;
+    position: sticky;
+    top: 50px;
+}
+.list{
+    width: 800px;
+    margin: 200px auto;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+}
+.list .item{
+    width: 380px;
+    position: relative;
+    background-color:aquamarine;
+}
+.list .item img{
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.list .item .text{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(22, 110, 74, 0.54);
+    text-align: center;
+}
+
+.list-02{
+    width: 1280px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.list-02 .item{
+    width: 300px;
+    position: relative;
+}
+.list-02 .item img{
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+}
+.list-02 .item p{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(250, 235, 215, 0);
+    border-radius: 50%;
+}
+/*  방법2)
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    방법1,2 자주 쓰이니 공식처럼 외울것! */

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>좌우버튼클래스명제어</title>
+    <link rel="stylesheet" href="css/스크립트10.css">
+    <script>
+        window.onload = () => {
+            let sectionItem = document.getElementsByClassName('item'); /* 모든item에게 적용이므로 인덱스값 설정x */
+            let sectionImg = document.getElementsByTagName('img')[0];
+            let sectionText = document.getElementsByTagName('h2')[0];
+            let sectionPrev = document.getElementsByClassName('prev')[0];
+            let sectionNext = document.getElementsByClassName('next')[0];
+            let i = 0;
+
+            let imageList = ['img/img-9.jpg', 'img/img-8.jpg', 'img/img-7.jpg', 'img/img-6.jpg']
+            let TextList = ['item title 2', 'item title 3', 'item title 4', 'item title 5']
+
+            console.log(imageList.length)
+
+            sectionNext.addEventListener('click', () => {
+                i++; /* 클릭했을때 1씩 증가이므로 이 영역에 입력 */
+
+                if (i >= imageList.length) {
+                    i = 0;
+                }
+
+                sectionImg.src = imageList[i];
+                sectionText = TextList[i];
+            });
+
+            sectionPrev.addEventListener('click', () => {
+                i--;
+                sectionItem[i+1].classList.remove('active');
+                if (i < 0) {
+                    i = sectionItem.length - 1;
+                };
+                sectionItem[i].classList.add('active');
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="list">
+            <div class="item active">
+                <img src="img/img-10.jpg" alt="">
+                <div class="text">
+                    <h2>item title 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ullam eius cum, neque omnis,
+                        cumque minus voluptatem corporis consectetur nobis optio recusandae dolore non ex! Reiciendis
+                        velit necessitatibus temporibus provident.</p>
+                </div><!-- text -->
+            </div><!-- item -->
+
+            <div class="item">
+                <img src="img/img-10.jpg" alt="">
+                <div class="text">
+                    <h2>item title 2</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur voluptatem, dolores
+                        praesentium molestiae alias reiciendis provident consequatur, ex cum quidem dolorem repudiandae,
+                        dolore doloremque deserunt corporis maiores voluptatibus corrupti at.
+                    </p>
+                </div><!-- text -->
+            </div><!-- item -->
+
+            <div class="item">
+                <img src="img/img-10.jpg" alt="">
+                <div class="text">
+                    <h2>item title 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ullam eius cum, neque omnis,
+                        cumque minus voluptatem corporis consectetur nobis optio recusandae dolore non ex! Reiciendis
+                        velit necessitatibus temporibus provident.</p>
+                </div><!-- text -->
+            </div><!-- item -->
+
+            <div class="item">
+                <img src="img/img-10.jpg" alt="">
+                <div class="text">
+                    <h2>item title 4</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ullam eius cum, neque omnis,
+                        cumque minus voluptatem corporis consectetur nobis optio recusandae dolore non ex! Reiciendis
+                        velit necessitatibus temporibus provident.</p>
+                </div><!-- text -->
+            </div><!-- item -->
+
+            <div class="item">
+                <img src="img/img-10.jpg" alt="">
+                <div class="text">
+                    <h2>item title 5</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ullam eius cum, neque omnis,
+                        cumque minus voluptatem corporis consectetur nobis optio recusandae dolore non ex! Reiciendis
+                        velit necessitatibus temporibus provident.</p>
+                </div><!-- text -->
+            </div><!-- item -->
+        </div><!-- list -->
+
+        <div class="btn">
+            <button class="prev">이전</button>
+            <button class="next">다음</button>
+        </div><!-- btn -->
+
+    </section><!-- section -->
+</body>
+
+</html>

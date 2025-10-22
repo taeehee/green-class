@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <link rel="stylesheet" href="css/스크립트14.css">
+    <script>
+        window.onload = () => {
+            let tabMenu = document.querySelectorAll('.tab_menu li');
+            let tabCont = document.querySelectorAll('.list');
+
+            //li를 클릭했을 때 실행
+            //list에게 클래스명 acive를 추가
+            //첫번째 li에게 클릭하면 첫번째 list에게 active추가
+            //두번째 li에게 클릭하면 두번째 list에게 active추가
+
+            //for(초기식; 조건식; 증감식) {실행코드}
+            for (let i = 0; i < tabMenu.length; i++) {
+                tabMenu[i].addEventListener('click', () => {
+
+                    //모든 li에게 .active 삭제
+                    //클릭한 li에게 .active 추가
+                    tabMenu.forEach(tabMenuIndex => {
+                        tabMenuIndex.classList.remove('active')
+                    });
+                    
+                    tabMenu[i].classList.add('active');
+
+                    // 작성순서: class명 1.제거(remove)-> 2.추가(active)
+                    // tabCont[0].classList.remove('active')
+                    // tabCont[1].classList.remove('active')
+                    // forEach() : 반복적으로 구성된 배열을 실행
+
+                    //tabContIndex = [tabCont[0], tabCont[1]]이라는 뜻
+                    tabCont.forEach(tabContIndex => {
+                        tabContIndex.classList.remove('active');
+                    });
+
+                    //list에게 클래스명 active를 추가
+                    tabCont[i].classList.add('active');
+                });
+            }
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <h3>tab content</h3>
+            <ul class="tab_menu">
+                <li acitve>menu1</li>
+                <li>menu2</li>
+            </ul><!-- tab menu -->
+
+            <div class="list active">
+                <div class="item">
+                    <img src="img/img-10.jpg" alt="">
+                    <strong>item 1</strong>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-9.jpg" alt="">
+                    <strong>item 2</strong>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-8.jpg" alt="">
+                    <strong>item 3</strong>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-7.jpg" alt="">
+                    <strong>item 4</strong>
+                </div><!-- item -->
+            </div><!-- list / 1 -->
+
+            <div class="list">
+                <div class="item">
+                    <img src="img/img-6.jpg" alt="">
+                    <strong>item 5</strong>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-5.jpg" alt="">
+                    <strong>item 6</strong>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-4.jpg" alt="">
+                    <strong>item 7</strong>
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-3.jpg" alt="">
+                    <strong>item 8</strong>
+                </div><!-- item -->
+            </div><!-- list / 2 -->
+
+        </div><!-- inner -->
+    </section><!-- section -->
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>여백</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul li{
+			list-style: none;
+			width: 200px;
+			height: 200px;
+			background-color: pink;
+		}
+
+		.box-01 li:nth-child(1) {
+			margin-top: 50px;
+			margin-left: 100px;
+			margin-bottom: 20px;
+			margin-right: 30px;
+		}
+		.box-01 li:nth-child(2) {
+			margin: 30px 40px 50px 60px;
+		}
+		.box-01 li:nth-child(3) {
+			margin: 10px 50px 30px;
+		}
+		.box-01 li:nth-child(4) {
+			margin: 50px auto;
+		}
+
+		.box-02 li {
+			margin: 20px;
+			box-sizing:border-box;
+		}
+		.box-02 li:nth-child(1) {
+			padding: 50px;
+		}
+		.box-02 li:nth-child(2) {
+			padding: 10px 20px;
+		}
+		.box-02 li:nth-child(3) {
+			padding: 10px 100px 60px;
+		}
+		.box-02 li:nth-child(4) {
+			padding: 100px 60px 20px;
+		}
+		.event{
+		width: 580px;
+		background-color: #94fa6bd0;
+		padding: 60px;
+		box-sizing:border-box;
+		}
+		.event h1{
+		font-size: 40px;
+		margin-bottom: 40px;
+		}
+		.event ol li {
+			background-color:white;
+			margin-bottom: 20px;
+			list-style: none;
+			padding: 18px 28px;
+			border-radius: 30px;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="box-01">
+		<li>마진1</li>
+		<li>마진2</li>
+		<li>마진3</li>
+		<li>마진4</li>
+	</ul>
+
+	<ul class="box-02">
+		<li>패딩1</li>
+		<li>패딩2</li>
+		<li>패딩3</li>
+		<li>패딩4</li>
+	</ul>
+	
+	<div class="event">
+		<h1>슬림 버니 쉐이크<br />
+		이럴 때 드세요!</h1>
+		<ol>
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+			<li>내용4</li>
+		</ol>
+	</div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

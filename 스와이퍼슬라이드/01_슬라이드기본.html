@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드기본</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/01.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", { /* myswiper부분만 이름변경할 수 있음 */
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+            //두번째 스와이퍼슬라이드
+            var swiper = new Swiper(".swiper-02", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <section class="section-01">
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+            </div><!-- .Swiper-wrapper end -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- .Swiper end-->
+    </section><!-- .section-01 end -->
+
+    <section class="section-02">
+        <!-- Swiper -->
+        <div class="swiper swiper-02">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/aenimeisyeon-mujigae-pung-gyeong.jpg" alt="">
+                </div><!-- swiper-slide -->
+        
+                <div class="swiper-slide">
+                    <img src="img/hotel-lijoteu-geoui-bada-bada-haebyeon-eseo-aleum-daun-yaoe-suyeongjang.jpg" alt="">
+                </div><!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/huin-guleum-puleun-haneulgwa-copyspacewa-aleumdaun-yeoldae-haebyeon-bada-bada.jpg" alt="">
+                </div><!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-eumsiggwa-hwang-geum-pokeuwa-naipeuga-issneun-du-jeobsiui-sangdan-bogi.jpg" alt="">
+                </div><!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-sigpumgwa-abokadoga-issneun-pyeongpyeonghan-jeobsi.jpg" alt="">
+                </div><!-- swiper-slide -->
+                </div><!-- .swiper wrapper end -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- .swiper -->
+    </section><!-- .section-02 end -->
+
+    
+
+</body>
+
+</html>

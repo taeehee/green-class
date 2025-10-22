@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹콘텐츠</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .section-01{
+            background-color: pink;
+            width: 1280px;
+            margin: 0 auto;
+        }
+
+         .section-01 h2{
+        font-size: 40px;
+        margin-bottom: 40px;
+          }
+
+        .section-01 .list{
+            display: flex;
+            justify-content: space-between;
+        }
+
+          .section-01 .list .item{
+            width: 300px;
+            background-color:rgb(194, 194, 194);
+            border: 1px solid #000;
+          }
+          .section-02{
+            background: url(/img/이미지-2.jpg) center center / cover no-repeat;
+            padding: 100px 0;
+          }
+          .section-02 .inner{
+            width: 1280px;
+            /*background-color: aliceblue;  */ 
+            margin: 0 auto;
+          }
+          .section-02 .inner h2{
+            font-size: 40px;
+            margin-bottom: 40px;
+          }
+          .section-02 .inner .list{
+            display: flex;
+            justify-content: space-between;
+          }
+          .section-02 .inner .list .item {
+            width: 400px;
+            border: 1px solid black;
+            background-color: rgb(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+          }
+          .section-03{
+            background-color: beige;
+          }
+          .section-03 .inner{
+            width: 1280px;
+            margin: 0 auto;
+            padding: 100px 0;
+          }
+          .section-03 .inner h2{
+            font-size: 40px;
+            margin-bottom: 40px;
+          }
+          .section-03 .inner .list{
+            display: flex;
+            justify-content: space-between;
+          }
+          .section-03 .inner .list .item{
+            width: 300px;
+            
+          }
+          .section-03 .inner .list .item img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            /* 이미지크기가 찌그러지면 안되므로 오브젝트-핏 */
+          }
+        
+    </style>
+</head>
+<body>
+    <div class="section-01">
+        <h2>첫번째 섹션</h2>
+        <div class="list">
+            <div class="item">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio sunt rerum earum temporibus cum cupiditate eveniet laborum pariatur, odit quas libero similique est perferendis nobis consequuntur error laudantium incidunt voluptatem!</p>
+            </div><!-- .item end -->
+            <div class="item">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio sunt rerum earum temporibus cum cupiditate eveniet laborum pariatur, odit quas libero similique est perferendis nobis consequuntur error laudantium incidunt voluptatem!</p>
+            </div><!-- .item end -->
+            <div class="item">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio sunt rerum earum temporibus cum cupiditate eveniet laborum pariatur, odit quas libero similique est perferendis nobis consequuntur error laudantium incidunt voluptatem!</p>
+            </div><!-- .item end -->
+            <div class="item">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio sunt rerum earum temporibus cum cupiditate eveniet laborum pariatur, odit quas libero similique est perferendis nobis consequuntur error laudantium incidunt voluptatem!</p>
+            </div><!-- .item end -->
+        </div><!-- .list end -->
+    </div><!-- .section-01 end -->
+    <div class="section-02">
+        <div class="inner">
+            <h2>두번째 섹션</h2>
+            <div class="list">
+                <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus esse placeat quibusdam, numquam ducimus ipsum reprehenderit quod velit, quaerat laudantium maxime eius nesciunt voluptatibus sapiente omnis id obcaecati quo qui!</p>
+                </div><!-- .item end -->
+                    <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus esse placeat quibusdam, numquam ducimus ipsum reprehenderit quod velit, quaerat laudantium maxime eius nesciunt voluptatibus sapiente omnis id obcaecati quo qui!</p>
+                </div><!-- .item end -->
+                    <div class="item">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus esse placeat quibusdam, numquam ducimus ipsum reprehenderit quod velit, quaerat laudantium maxime eius nesciunt voluptatibus sapiente omnis id obcaecati quo qui!</p>
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </div><!-- .section-02 end -->
+
+    <div class="section-03">
+        <div class="inner">
+            <h2>세번째 섹션</h2>
+            <div class="list">
+                <div class="item">
+                    <img src="/img/밀리도서-1.jpg" alt="이미지설명">
+                    <div class="text">
+                        <h3>아이템 제목</h3>
+                        <p>아이템에 대한 설명 내용들</p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <img src="/img/밀리도서-2.jpg" alt="이미지설명">
+                    <div class="text">
+                        <h3>아이템 제목</h3>
+                        <p>아이템에 대한 설명 내용들</p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <img src="/img/밀리도서-3.jpg" alt="이미지설명">
+                    <div class="text">
+                        <h3>아이템 제목</h3>
+                        <p>아이템에 대한 설명 내용들</p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+                <div class="item">
+                    <img src="/img/밀리도서-4.jpg" alt="이미지설명">
+                    <div class="text">
+                        <h3>아이템 제목</h3>
+                        <p>아이템에 대한 설명 내용들</p>
+                    </div><!-- .text end -->
+                </div><!-- .item end -->
+            </div><!-- .list end -->
+        </div><!-- .inner end -->
+    </div><!-- .section-03 end -->
+</body>
+</html>

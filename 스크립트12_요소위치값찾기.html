@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소위치값찾기</title>
+    <link rel="stylesheet" href="/css/스크립트12.css">
+    <script>
+        window.onload = () => {
+            let section1 = document.getElementsByClassName('section-01')[0]; //.section-01
+            let topBtn = document.getElementsByClassName('top_btn')[0]; //.top_btn
+
+            //section1이 화면에서 떨어진 y축 값 찾기
+            //offsetTop; y축 값 찾기
+            console.log(section1.offsetTop)
+
+            window.addEventListener('scroll', () => {
+                /* 헤더부터 브라우저 상단까지 거리를 알아야함 */
+                let scrollBar = window.scrollY;
+                //스크롤바의 값이 첫번째 섹션의 y축값보다 더 클때 실행
+                //top_btn에게 클래스명 active 추가
+                //조건이 맞지 않으면 top_btn에게 클래스명 active 삭제
+
+                if (scrollBar > section1.offsetTop) {
+                    topBtn.classList.add('active');
+                } else {
+                    topBtn.classList.remove('active');
+                }
+            }); //script end
+        };</script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header">
+            header
+        </header><!-- header -->
+
+        <main class="main">
+            <section class="main_visual">
+                <img src="/img/img-6.jpg" alt="">
+            </section><!-- main_visual -->
+
+            <section class="section-01">
+                첫번째 섹션
+            </section><!-- section-01 -->
+
+            <section class="section-02">
+                두번째 섹션
+            </section><!-- section-02 -->
+        </main><!-- main -->
+
+        <button class="top_btn">top</button>
+
+        <footer class="footer">푸터</footer>
+
+    </div><!-- #wrap -->
+</body>
+
+</html>

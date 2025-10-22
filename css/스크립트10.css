@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+
+
+.section {
+    max-width: 1280px;
+    width: calc(100% - 30px);
+    margin: 50 auto;
+}
+
+.section .list .item {
+    display: none; 
+    /* 버튼누르기전에 이미지와 텍스트 숨김*/
+}
+
+.section .list .item.active {
+    display: block;
+    /* item active했을때 이미지와 텍스트가 나타남  */
+}
+
+.section .list .item img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+}

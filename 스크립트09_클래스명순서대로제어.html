@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스명순서대로제어</title>
+    <link rel="stylesheet" href="css/스크립트09.css">
+    <script>
+        window.onload = () => {
+            let item = document.getElementsByClassName('item'); /* 모든item에게 적용이므로 인덱스값 설정x */
+            let btn = document.getElementsByClassName('btn')[0];
+
+            let i = 0;
+
+            //item[1] 인덱스 작성[index]
+            //classList.add('클래스명') 클래스명 추가
+            //classList.remove('클래스명') 클래스명 삭제
+
+            //item[2].classList.add('active')
+            //item index2->'아이템3'에게 클래스명을 추가하라.
+            //item[0].classList.remove('active')
+
+            /* 버튼을 클릭했을 때 실행
+            item에게 순서대로 클래스명 active추가 */
+            btn.addEventListener('click', () => {
+                i++; /* 클릭했을때 1씩 증가이므로 이 영역에 입력 */
+                
+                //*작성순서- 1.삭제(remove)2.조건추가 3.결과값
+
+                item[i-1].classList.remove('active');
+
+                if(i >= item.length) {
+                    i = 0;
+                }
+                console.log(i)
+
+                item[i].classList.add('active');
+            });
+
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <div class="list">
+        <div class="item active">아이템 1</div>
+        <div class="item">아이템 2</div>
+        <div class="item">아이템 3</div>
+        <div class="item">아이템 4</div>
+        <div class="item">아이템 5</div>
+    </div><!-- list -->
+
+    <button class="btn">버튼</button>
+
+</body>
+
+</html>

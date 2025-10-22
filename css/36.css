@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body.active {
+    overflow: hidden;
+}
+
+.header {
+    height: 100px;
+}
+
+.header .inner {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header .inner .logo {
+    height: 70px;
+}
+
+.header .inner .logo a {
+    display: block;
+    /* 이미지크기보다 a영역 크기가 작고 아래로 내려와있어서 맞춰주는 작업 */
+    height: 100%;
+}
+
+.header .inner .logo a img {
+    /* 로고, 아이콘 이미지는 cover를 주지않는것이 좋다 */
+    height: 100%;
+}
+
+.header .inner .menu_btn {
+    height: 40px;
+    border: 0;
+    background-color: transparent;
+    /* 배경 투명하게 적용 */
+
+}
+
+.header .inner .menu_btn img {
+    height: 100%;
+}
+
+.header .inner nav {
+    width: 50%;
+    height: 100%; /* 메뉴3까지만 나오므로 높이를 생성해준다 */
+    background-color: #babbd8;
+    position: fixed;
+    right: -100%;
+    top: 100px;
+    padding: 70px;
+    /* display: none; */
+    transition: right 0.7s linear;
+    overflow-y: auto; /* 내용이 넘치면 스크롤바를 만들어준다 */
+}
+
+/* 스크롤 바 모양 없애기 (기능은 적용o) */
+.header .inner .nav::-webkit-scrollbar {
+    display: none;
+}
+
+
+.header .inner .nav.active {
+    /*     display: block; */
+    right: 0;
+}
+
+.header .inner nav .gnb {}
+
+.header .inner nav .gnb>li {
+    margin-bottom: 32px;
+}
+
+.header .inner nav .gnb>li .depth-01 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header .inner nav .gnb>li .depth-02 {}
+
+.header .inner nav .gnb>li .depth-02 li {
+    color: rgb(0, 0, 0, 0.724);
+    padding: 10px 0;
+}
+
+.header .inner nav .gnb>li .depth-02 li a {}
+
+.main_visual{
+    height: 150vh;
+}

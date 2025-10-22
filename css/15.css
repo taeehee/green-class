@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit
+}
+
+.shadow div{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(149, 248, 187);
+    margin: 100px;
+}
+.shadow div:nth-of-type(1){
+    box-shadow: 10px 40px 20px rgb(248, 135, 248);
+    /* 그림자: x축 y축 블러 색상 */
+}
+.shadow div:nth-of-type(2){
+    box-shadow: -10px -40px 20px rgb(248, 136, 136);
+}
+.shadow div:nth-of-type(3){
+    box-shadow: 5px 10px 10px pink,
+                10px 10px 10px yellow,
+                20px 20px 10px green;
+}
+.shadow div:nth-of-type(4){
+    box-shadow: inset 20px 40px 40px violet;
+}
+.shadow div:nth-of-type(5){
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.628);
+}

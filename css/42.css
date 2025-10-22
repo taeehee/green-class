@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+}
+
+.section .inner {
+    max-width: 1440px;
+    width: calc(100% - 30px);
+    /* 태블릿 좌우마진15*2 */
+    margin: 150px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 38px;
+}
+
+.section .inner>div {
+    /* title 과 item만 적용시키기위해 꺾새 */
+    width: 31.59%;
+    border-radius: 10px;
+    overflow: hidden;
+    /* 모서리곡선으로 삐져나오는 이미지 정리 */
+    /* 455 / 1440 * 100 = 31.59% */
+}
+
+.section .inner>div .image {
+    /*     height: 455px; 아래 패딩-바텀이 적용되기하기위해 height값을 없애준다 */
+    padding-bottom: 100%;
+    /* 부모가 가진 넓이의 아래쪽으로 영역을 늘려준다.
+    -반응형에 따라 이미지가 가로세로 일정하게 축소확대되도록 */
+    position: relative;
+}
+
+.section .inner>div .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section .inner .item.item-big {
+    width: 48.75%
+        /* 702 / 1440 *100 = 78.75%  */
+}
+
+.section .inner .item.item-big .image {
+    /*  세로/가로*100  */
+    padding-bottom: 64.81%;
+    /* 가로세로값 같은 비율로 확대축소되도록 */
+}
+
+.section .inner .title {
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section .inner .item {
+    position: relative;
+}
+
+.section .inner>div:nth-child(2) {
+    /* item:nth-child로 쓰지않는 이유:  */
+    order: -1;
+}
+
+
+.section .inner .item .text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.3);
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section .inner .item:hover .text {
+    display: flex;
+}
+
+@media screen and (max-width:1024px) {
+    .section .inner .item .text {
+        height: auto;
+        display: flex;
+        background: #000000; 
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+        /* 백그라운드-컬러(X) 그라디언트라서 백그라운드(O) */
+        top: auto;
+        /* top과 bottom을 같이 쓸수없어서 top값을 초기화 시켜준다 */
+        bottom: 0;
+        padding: 50px 0 20px;
+    }
+}
+
+/* 1024px */
+
+@media screen and (max-width:700px) {
+    .section .inner>div:nth-child(2) {
+        order: 0;
+    }
+
+    .section .inner .title {
+        width: 100%;
+        border: 0
+    }
+
+    .section .inner>div {
+        width: 47.77%
+            /* 172 / 360 *100 = 47.77% */
+    }
+
+    .section .inner .item.item-big {
+        width: 47.77%;
+    }
+
+    .section .inner .item.item-big .image {
+        padding-bottom: 100%;
+    }
+
+    .section .inner .item .text {
+        position: static;
+        /* 포지션 초기화 */
+        background: rgb(253, 253, 253);
+        /* 백그라운드-컬러가 아니라 백그라운드. */
+        color: black;
+        padding: 0;
+        margin-top: 10px;
+    }
+}
+
+/* 700px */

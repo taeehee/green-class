@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더나타나고 사라짐</title>
+    <link rel="stylesheet" href="css/스크립트17.css">
+    <script>
+        window.onload = () => {
+            let header = document.querySelector('.header'); //.header 겟엘리먼트를 써도 되지만 쿼리로 짤고 간단하게.
+            let prevScrollBar = 0; //이전 스크롤바의 위치
+
+            window.addEventListener('scroll', () => {
+                let scrollBar = window.scrollY; //현재 스크롤바의 위치
+                console.log(prevScrollBar)
+                console.log(scrollBar)
+
+                //조건식 (현재 스크롤바의 값 > 이전 스크롤바의 값) 실행
+                //클래스명 header에게 클래스명 active추가
+                //조건이 맞지 않으면 클래스명 header에게 클래스명 active삭제
+
+                if (scrollBar > prevScrollBar) {
+                    header.classList.add('active');
+                } else {
+                    header.classList.remove('active');
+                }
+                
+
+                prevScrollBar = scrollBar;
+
+            }); //scroll()
+        }; //script end
+    </script>
+</head>
+<body>
+    <header class="header">header</header>
+    
+</body>
+</html>

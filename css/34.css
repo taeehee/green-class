@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 100px;
+    border-bottom: 1px solid #333;
+}
+
+.header .inner {
+    width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+}
+
+.header .inner .nav .gnb>li {
+    /* li앞에 꺽새가 있으면 바로밑에있는 li만 선택된다는 뜻 (gnb밑의 li만. ul밑의 li는x */
+    position: relative; /* li를 기준으로 뎁쓰-02에 position 적용해서 위치를 잡아줌 */
+}
+
+.header .inner .nav .gnb>li .depth-01 {
+    font-size: 18px;
+    background-color: thistle;
+    display: block; /* 뎁스01은 인라인테그 이기때문에 디스플레이:블락을 주고 라인하이트 설정 */
+    line-height: 100px;
+    padding: 0 40px;
+}
+
+.header .inner .nav .gnb>li:hover .depth-02{ /* 호버했을때 "뎁쓰-02"가 나타난다 */
+    display: block;
+}
+
+.header .inner .nav .gnb>li .depth-02 {
+    width: 100%;
+    background-color: aquamarine;
+    position: absolute; /* li를 기준으로 뎁쓰-02에 position 적용해서 위치를 잡아줌 */
+    top: 100px;
+    left: 0;
+    display: none; /* 뎁쓰-02가 보이지않도록 설정 (뎁쓰-01 호버했을때 나타나기위해) */
+}
+
+.header .inner .nav .gnb>li .depth-02 li {
+    text-align: center;
+    padding: 10px 0;
+}

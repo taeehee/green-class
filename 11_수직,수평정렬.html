@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수직,수평정렬</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+        
+    }
+    a{
+        text-decoration: none;
+        color:inherit
+    }
+    .box{
+        width: 338px;
+        height: 108px;
+
+        /* 그림자: x축, y축 흐림 색상 */
+        box-shadow: 5px 5px 20px rgba(235, 3, 3, 0.3);
+        margin: 100px auto;
+        border-radius: 8px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .box img{
+        width: 71px;
+    }
+
+
+    .list{
+        width: 338px;
+        height: 108px;
+        margin: 100px auto;
+        padding: 0 20px;
+        box-sizing: border-box;
+        box-shadow: 5px 5px 20px rgba(4, 77, 187, 0.3);
+        border-radius: 8px;
+        display:flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .list .info{
+        display:flex;
+    }
+
+    .list .info img{
+        width: 71px;
+        margin-right: 45px;
+    }
+
+    .list .info p{
+        display: flex;
+        align-items: center;
+    }
+
+
+    .list-02{
+        width: 375px;
+        height: 108px;
+        margin: 100px auto;
+        box-shadow: 5px 5px 20px rgb(3, 121, 18, 0.3);
+        border-radius: 8px;
+        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .list-02 .info{
+        display: flex;
+        
+    }
+    
+    .list-02 .info img{
+        width: 71px;
+        margin-right: 20px;
+    }
+    .list-02 .info .text span{
+       
+        display: flex; 
+        margin-bottom: 10px;
+        /* flex해도 줄바꿈 적용되는이유? */
+        font-size: 14px;
+        color:gray;   
+    
+    }
+    .list-02 .info .text strong{
+        line-height: 1.3;
+        /* 16*2=>32 */
+    
+    }
+   
+</style>
+
+<body>
+
+    <div class="box">
+        <img src="img/이미지-1.jpg" alt="이미지 설명">
+        <p>이미지 제목 작성</p>
+        <a href="#">보기</a>
+    </div><!-- .box end -->
+
+
+    <div class="list">
+        <div class="info">
+            <img src="/img/이미지-2.jpg" alt="이미지 설명">
+            <p>이미지 제목 작성</p>
+        </div><!-- .info end -->
+
+        <a href="#">보기</a> <!--지금은 링크주소를 모르기때문에 #으로 대체함.  -->
+    </div><!-- .list end -->
+<div class="list_wrap">
+    <div class="list-02">
+        <div class="info">
+            <img src="img/이미지-1.jpg" alt="이미지설명">
+            <div class="text">
+                <span>소스내추럴</span>
+                <strong>메가 스트렝스 베타 <br />
+                시토스테롤</strong>
+            </div><!-- .text end -->
+        </div><!-- .info end -->
+        <a href="#">보기</a>
+    </div> <!-- .list-02 end -->
+    <div class="list-02">
+    </div><!-- .list-02 -->
+    <div class="list-02">
+    </div><!-- .list-02 -->
+    <div class="list-02">
+    </div><!-- .list-02 -->
+    </div><!-- .list_wrap end -->
+
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    background-color: rgb(142, 213, 241);
+    margin: 50px 0;
+    padding: 50px;
+}
+
+section h2{
+    margin-bottom: 40px;
+}
+
+section .list{
+    background-color:rgb(176, 241, 146);
+}
+
+section .list .item{
+    background-color:rgb(230, 200, 206);
+    border: 1px solid black;
+}
+
+.flex-01 .list{
+    display: flex;
+    justify-content: space-between;
+    /* center
+    flex-end
+    flex-start(기본값)
+    space-around : 양끝 여백이 요소 사이 여백의 1/2
+    space-evenly : */
+}
+
+.flex-02 .list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* center
+    flex-start
+    flex-end */
+}
+.flex-02 .list .item:first-child{
+    height: 300px;
+}
+.flex-02 .list .item:nth-child(2){
+    height: 200px;
+}
+.flex-02 .list .item:nth-child(3){
+    height: 100px;
+}
+
+.flex-03 .list{
+    height:300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    /* center
+    flex-end
+    flex-start(기본값)
+    space-around : 양끝 여백이 요소 사이 여백의 1/2
+    space-evenly : 
+    space-between */
+}
+.flex-03 .list .item{
+    width: 100%;
+}
+
+.flex-04 .list {
+    display: flex;
+}
+.flex-04 .list .item:first-child{
+    order: 1;
+    /* order는 부모에 display: flex가 있어야 쓸 수 있음
+    0이 기준이며 숫자가 클수록 뒤로 감 */
+}
+.flex-04 .list .item:last-child{
+    order: -2;
+}
+
+.flex-05 .list{
+    height: 300px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    /* flex-direction:column 이란 개별 item들이 수직정렬되는 것이 아니라
+    전체가 수직정렬(줄바꿈)된다는 뜻.
+    flex-direction: column이 오면
+    justiry-content와 align-content의 정의가 반대된다
+    justify-content: 수직(세로)정렬
+    align-content: 수평(가로)정렬 */
+}
+
+.cj{
+    width: 350px;
+    height: 450px;
+    background-color: rgb(250, 174, 164);
+    padding:30px;
+    display: flex;
+    flex-direction:column;
+    /* flex-direction:column 이란 개별 item들이 수직정렬되는 것이 아니라
+    전체가 수직정렬(줄바꿈)된다는 뜻
+    flex-direction: column이 오면
+    justiry-content와 align-content의 정의가 반대된다
+    justify-content: 수직(세로)정렬
+    align-content: 수평(가로)정렬 */
+}
+.cj strong{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:rgb(97, 97, 184);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   /*  text-align: center;
+    line-height: 50px; */
+}

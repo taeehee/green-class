@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.section-01 {
+    width: 1280px;
+    margin: 100px auto;
+}
+
+
+.section-01 .swiper-slide img {
+    width: 100%;
+    height: 282px;
+    object-fit: cover;
+    position: relative; /* 부모에 relative를 지정하는것이 아니라 기준점에 지정. */
+
+}
+.section-01 .swiper-slide .text {
+    position: absolute; /* absolute썼으면 relative가 있어야함. */
+    top: 50%; 
+    left: 50%; 
+    /* absolute썼을때 텍스트가 사라져서 위치 확인이 안됨ㅠ
+    -> top,left 수치 써줘야 텍스트가 나타남 */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:#fff;
+    display: none; 
+}
+
+.section-01 .swiper-slide.swiper-slide-next .text{ 
+    /* 클래스명이없는 것은 띄어쓰기x. 붙여쓴다
+    개발창보고 이미지영역 선택한 것 */
+display: block;
+}
+
+
+
+.section-02{
+    width:1280px;
+    margin:100px auto;
+}
+
+.section-02 .swiper-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    position: relative;
+}
+.section-02 .swiper-slide p{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:#fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.section-02 .swiper-slide.swiper-slide-next{
+    transform: scale(1.5);
+    z-index: 9;
+}
+.section-02 .swiper-slide.swiper-slide-active {
+    transform: scale(0.8);
+}
+.section-02 .swiper-slide {
+    transform: scale(0.8);
+}
+
+
+

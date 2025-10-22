@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색박스나타나기</title>
+    <link rel="stylesheet" href="css/스크립트03.css">
+    <script>
+        window.onload = () => {
+
+            //검색하기 클릭했을 때 실행
+            //검색박스가 나타남
+            //검색닫기 버튼이 나타남
+            //검색하기 버튼이 사라짐
+
+            let openBtn = document.getElementsByClassName('open_btn')[0]; /* open_btn이라는 클래스명으로서 첫번째 */
+            let closeBtn = document.getElementsByClassName('close_btn')[0];
+            let searchBox = document.getElementsByClassName('search_box')[0]; 
+
+            openBtn.addEventListener('click', () => {
+                    searchBox.style.display = 'block';
+                    closeBtn.style.display = 'block';
+                    openBtn.style.display = 'none';
+            });
+
+            //검색닫기 클릭했을 때 실행
+            //검색박스 사라짐
+            //검색닫기 버튼이 사라짐
+            //검색하기 버튼이 나타남
+            //변수는 이미 작성되어있으므로 실행코드만 작성하면 됨
+
+            closeBtn.addEventListener('click', () => {
+                searchBox.style.display = 'none';
+                closeBtn.style.display = 'none';
+                openBtn.style.display = 'block';
+            });
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">logo</a>
+            </h1><!-- logo -->
+            <nav class="nav">
+                <ul class="gnb">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul><!-- gnb -->
+            </nav><!-- nav -->
+
+            <div class="search_wrap"> <!-- class로 각 감싸주기 -->
+                <button class="open_btn">검색하기</button>
+                <button class="close_btn">검색닫기</button>
+            </div><!-- search_wrap -->
+
+            <div class="search_box">
+                <input type="text" name="" id="" placeholder="검색어를 입력해주세요.">
+                <!-- input:text라고 입력해야 id까지나옴 + placehorder는 직접 추가함. -->
+            </div><!-- search_box -->
+
+        </div><!-- inner -->
+    </header><!-- header -->
+</body>
+
+</html>

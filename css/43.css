@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {}
+
+body {
+    margin: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+.check {
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 20px;
+}
+
+.select {
+    margin-bottom: 20px;
+}

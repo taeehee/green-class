@@ -1,0 +1,35 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.section{
+    width: 1920px;
+    margin: 160px 320px;
+}
+
+.section .inner{
+    width: 1280px; 
+}
+.section .inner h2{
+    font-size: 70px;
+}
+
+.section .inner .list .left img{
+    width: 627px;
+
+
+}
+
+.section .inner .list .right{
+    display: flex;
+     
+}

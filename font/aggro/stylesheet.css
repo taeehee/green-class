@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'SB-Aggro'; /* 폰트 이름에 공백있으면 안좋음. 공백 대신 하이픈(-) */
+    src: url('SBAggroL.eot');
+    src: url('SBAggroL.eot?#iefix') format('embedded-opentype'),
+        url('SBAggroL.woff2') format('woff2'),
+        url('SBAggroL.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB-Aggro'; /* 폰트 이름에 공백있으면 안좋음. 공백 대신 하이픈(-) */
+    src: url('SBAggroM.eot');
+    src: url('SBAggroM.eot?#iefix') format('embedded-opentype'),
+        url('SBAggroM.woff2') format('woff2'),
+        url('SBAggroM.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SB-Aggro'; /* 폰트 이름에 공백있으면 안좋음. 공백 대신 하이픈(-) */
+    src: url('SBAggroB.eot');
+    src: url('SBAggroB.eot?#iefix') format('embedded-opentype'),
+        url('SBAggroB.woff2') format('woff2'),
+        url('SBAggroB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

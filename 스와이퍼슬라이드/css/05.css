@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section {
+    position: relative;
+}
+
+.section h2 {
+    width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.section .swiper-wrapper {
+    width: 1280px;
+    margin: 0 auto;
+
+}
+
+.section .swiper {
+    position: static;
+    /* 포지션값 초기화 */
+}
+
+.section .swiper.sectionSwiper .swiper-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.section .swiper-horizontal>.swiper-pagination-bullets,
+.section .swiper-pagination-bullets.swiper-pagination-horizontal,
+.section .swiper-pagination-custom,
+.section .swiper-pagination-fraction {
+    bottom: -20px;
+}
+
+.section-02 {
+    margin-top: 100px;
+}
+
+.section-02 h2 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.section-02 .swiper.mySwiper .swiper-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.section-02 .swiper.mySwiper .swiper-slide {
+    position: relative;
+}
+
+.section-02 .swiper.mySwiper .swiper-slide .text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    /* text가 한줄로 정렬됨 */
+    flex-direction: column;
+    /* 정렬방향: 수직 */
+    justify-content: flex-end;
+    /* 정렬방향이 수직방향으로 바뀌었으므로 end가 오른쪽이아닌 하단이 됨 */
+    padding: 20px;
+    display: none;
+    /* 화면 가운데오는 텍스트만 표시하기위해 */
+}
+
+
+.section-02 .swiper.mySwiper .swiper-slide .text strong {
+    font-size: 32px;
+}
+
+.section-02 .swiper.mySwiper .swiper-slide .text p {
+    font-size: 20px;
+}
+
+.section-02 .swiper.mySwiper .swiper-slide.swiper-slide-next+.swiper-slide {
+    /* 개발창보고 위치를 찾아서 복사, +뒤에는 다음 스와이퍼 슬라이드 (원하는 선택자가 없어서 +로 조합) */
+    background-color: aquamarine;
+    transform: scale(1.2);
+    /* 가운데 이미지만 확대! */
+}
+
+.section-02 .swiper.mySwiper .swiper-slide.swiper-slide-next+.swiper-slide .text {
+    display: flex; /* text를 나타나게 한다=> 보통은 block을 쓰는데 
+    위에서 text스타일에 flex로 정렬했으므로 동일한 flex를 써줘야한다 */
+}
+
+    
+    

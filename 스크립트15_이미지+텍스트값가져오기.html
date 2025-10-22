@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지+텍스트값가져오기</title>
+    <link rel="stylesheet" href="/css/스크립트15.css">
+    <script>
+        window.onload = () => {
+            let itemDetailTitle = document.querySelector('.item_detail .title'); /* 차이: 선택자찾는 속도(getelement가 더 빠름), 가독성 차이, 별 차이없지만 쿼리가 더 많이 쓰임*/
+            let itemDetailText = document.querySelector('.item_detail .text');
+            let itemDetailImage = document.querySelector('.item_detail img')
+
+            let item = document.querySelectorAll('.item'); //.item (item은 여러개라서 selectorAll)
+            let itemTitle = document.querySelectorAll('.item .title'); //.item .title
+            let itemText = document.querySelectorAll('.item .text'); //.item .text
+            let itemImage = document.querySelectorAll('.item img');
+
+            //for(초기식; 조건식; 증감식) {실행문}
+            for (let i = 0; i < item.length; i++) {
+                //아이템을 클릭했을 때 실행
+                //itemDetailTitle.innerHTML = itemTitle[i].innerHTML
+                item[i].addEventListener('click', () => {
+                    // itemDetailTitle.innerHTML = '🎄'; 
+                    itemDetailTitle.innerHTML = itemTitle[i].innerHTML; //변수,숫자는 따옴표X 
+                    itemDetailText.innerHTML = itemText[i].innerHTML;
+                    itemDetailImage.src = itemImage[i].src; //이미지 변경은 'src'   
+
+                }); //item[i].click()
+
+            } //for()
+        }; //script end
+    </script>
+</head>
+
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <div class="item_detail">
+                <img src="/img/img-1.jpg" alt="">
+                <h2 class="title">아이템 1</h2>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Error quas beatae porro illo, modi nobis a, ipsum aperiam vero, autem voluptate.
+                    Quo accusamus maiores corrupti voluptatem enim, est ipsa iusto!
+                </p><!-- text -->
+            </div><!-- item_detail -->
+
+            <div class="list">
+                <div class="item">
+                    <img src="/img/img-1.jpg" alt="">
+                    <h2 class="title">아이템 1</h2>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Error quas beatae porro illo, modi nobis a, ipsum aperiam vero, autem voluptate.
+                        Quo accusamus maiores corrupti voluptatem enim, est ipsa iusto!
+                    </p>
+                </div><!-- iten -->
+
+                <div class="item">
+                    <img src="/img/img-2.jpg" alt="">
+                    <h2 class="title">아이템 2</h2>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Amet voluptatibus illo architecto nemo laudantium repellat, est necessitatibus cupiditate
+                        deleniti saepe ratione error optio adipisci ad, quam temporibus esse tempora sunt.
+                    </p><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="/img/img-3.jpg" alt="">
+                    <h2 class="title">아이템 3</h2>
+                    <p class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Corrupti, sunt deleniti, similique veritatis porro soluta nulla velit iste in quas accusamus
+                        impedit facilis molestias molestiae quasi sint perferendis officia ea?
+                </div><!-- item -->
+
+            </div><!-- list -->
+        </div><!-- inner -->
+    </section><!-- section -->
+</body>
+
+</html>

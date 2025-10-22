@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>반응형-헤더</title>
+    <link rel="stylesheet" href="css/39.css">
+    <script>
+        //메뉴를 클릭했을 때 실행
+        //모바일 내비게이션에게 클래스명 active 추가
+        //스크립트는 대소문자 구분 중요! 
+        window.onload = () => {
+            //메뉴보기 클릭
+            document.querySelector('.nav_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.add('active');
+            });
+
+            //닫기 클릭
+            //닫기버튼을 클릭했을 때 실행
+            //모바일 내비게이션에게 클래스명 active 제거(remove)
+            document.querySelector('.close_btn').addEventListener('click', () => {
+                document.querySelector('.nav_mobile').classList.remove('active');
+            });
+
+        };//script end
+
+    </script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="#">
+                    <img src="img/target.png" alt="로고이미지">
+                </a>
+            </h1><!-- logo end -->
+
+            <!-- 데스크탑ver, 모바일ver nav 각각 만들어주기 -->
+            <nav class="nav_pc pc">
+                <ul class="gnb">
+                    <li>
+                        <a href="#" class="depth-01">menu1</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                            <li><a href="#">menu1-4</a></li>
+                            <li><a href="#">menu1-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu2</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                            <li><a href="#">menu2-4</a></li>
+                            <li><a href="#">menu2-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu3</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                            <li><a href="#">menu3-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu4</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                            <li><a href="#">menu4-4</a></li>
+                            <li><a href="#">menu4-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu5</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu5-1</a></li>
+                            <li><a href="#">menu5-2</a></li>
+                            <li><a href="#">menu5-3</a></li>
+                            <li><a href="#">menu5-4</a></li>
+                            <li><a href="#">menu5-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                </ul><!-- gnb end -->
+            </nav><!-- nav_pc pc end -->
+
+            <button class="nav_btn mobile">
+                <img src="img/아이콘/menu.png" alt="메뉴보기">
+            </button><!-- nav_btn mobile end  -->
+
+            <!-- 데스크탑ver, 모바일ver nav 각각 만들어주기 -->
+            <nav class="nav_mobile mobile">
+                <button class="close_btn"> <!-- .nav_mobile mobile 와 gnb 사이에 닫기 버튼 생성 -->
+                    <img src="img/아이콘/Close.png" alt="메뉴닫기">
+                </button><!-- close_btn end -->
+                <ul class="gnb">
+                    <li>
+                        <a href="#" class="depth-01">menu1</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                            <li><a href="#">menu1-4</a></li>
+                            <li><a href="#">menu1-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu2</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                            <li><a href="#">menu2-4</a></li>
+                            <li><a href="#">menu2-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu3</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                            <li><a href="#">menu3-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu4</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                            <li><a href="#">menu4-4</a></li>
+                            <li><a href="#">menu4-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                    <li>
+                        <a href="#" class="depth-01">menu5</a>
+                        <ul class="depth-02">
+                            <li><a href="#">menu5-1</a></li>
+                            <li><a href="#">menu5-2</a></li>
+                            <li><a href="#">menu5-3</a></li>
+                            <li><a href="#">menu5-4</a></li>
+                            <li><a href="#">menu5-5</a></li>
+                        </ul><!-- depth-02 end -->
+                    </li>
+                </ul><!-- gnb end -->
+            </nav><!-- nav_mobile mobile end -->
+
+
+
+        </div><!-- inner end -->
+    </header><!-- header end -->
+
+</body>
+
+</html>

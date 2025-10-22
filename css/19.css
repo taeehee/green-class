@@ -1,0 +1,138 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Gmarket-Sans';
+    src: url('../font/gmarketsans/GmarketSansTTFBold.eot');
+    src: url('../font/gmarketsans/GmarketSansTTFBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/gmarketsans/GmarketSansTTFBold.woff2') format('woff2'),
+        url('../font/gmarketsans/GmarketSansTTFBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket-Sans';
+    src: url('../font/gmarketsans/GmarketSansTTFLight.eot');
+    src: url('../font/gmarketsans/GmarketSansTTFLight.eot?#iefix') format('embedded-opentype'),
+        url('../font/gmarketsans/GmarketSansTTFLight.woff2') format('woff2'),
+        url('../font/gmarketsans/GmarketSansTTFLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket-Sans';
+    src: url('../font/gmarketsans/GmarketSansTTFMedium.eot');
+    src: url('../font/gmarketsans/GmarketSansTTFMedium.eot?#iefix') format('embedded-opentype'),
+        url('../font/gmarketsans/GmarketSansTTFMedium.woff2') format('woff2'),
+        url('../font/gmarketsans/GmarketSansTTFMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6, strong, b{
+    font-weight: inherit;
+}
+body{
+    font-family: 'Gmarket-Sans';
+    font-weight: 300;
+    color: #333;
+}
+
+.section{
+    width: 1920px;
+}
+.section .inner{
+    width: 1280px;
+    margin: 160px auto;
+}
+.section .inner h2{
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.section .inner .tab_menu{
+    display: flex;
+    column-gap: 16px;
+    ;  
+}
+
+.section .inner .tab_menu{
+    margin-bottom: 20px;
+}
+
+.section .inner .tab_menu li{
+    height: 40px;
+    background-color: #f2f2f2;
+    padding: 0 20px;
+    line-height: 40px; /* line-height는 한줄 적용가능, 높이바뀌면 값 바꿔줘야함 */
+    /* display: flex;
+    또는 align-items: center;  */
+    border-radius: 20px;
+}
+
+.section .inner .tab_menu li.active{
+    background-color: #0198ed;
+    color: #fff;
+}
+
+.section .inner .list{
+    display: flex;
+}
+
+.section .inner .list .left{
+    width: 637px;
+    margin-right: 28.49px;
+}
+.section .inner .list .left img{
+    width: 100%;
+    height: 627px;
+    object-fit: cover;
+    
+}
+.section .inner .list .right{
+    width: 615px;
+    display: flex;
+    flex-wrap: wrap;
+    /* raw-gap: 29px; */
+    align-content: space-between;
+}
+.section .inner .list .right .item{
+    display: flex;
+    align-items: center;
+    column-gap: 28px;
+    /* margin-bottom: 29px; */
+}
+.section .inner .list .right .item img{
+    width: 193px;
+    height: 190px;
+    object-fit: cover;
+}
+
+.section .inner .list .right .item .text span{
+    font-size: 14px;
+}
+.section .inner .list .right .item .text h3{
+    margin: 10px 0 25px;
+    /* span은 인라인태그라서 마진적용이 안됨. so, h3에 margin-top을 준다(10px) */
+    font-size: 22px;
+    font-weight: 500 ;
+}
+.section .inner .list .right .item .text strong{
+    font-size: 30px;
+    font-weight: bold ;
+}

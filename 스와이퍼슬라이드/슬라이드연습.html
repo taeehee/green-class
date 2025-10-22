@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드연습</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/슬라이드연습.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                }, /* 여기서 괄호 닫아줘야함!! */
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <section class="section-01">
+        <!-- slide per view -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1
+                    <img src="img/aenimeisyeon-mujigae-pung-gyeong.jpg" alt="">
+                </div><!-- swiper-slide  -->
+
+                <div class="swiper-slide">Slide 2
+                    <img src="img/hotel-lijoteu-geoui-bada-bada-haebyeon-eseo-aleum-daun-yaoe-suyeongjang.jpg" alt="">
+                </div><!-- swiper-slide  -->
+
+                <div class="swiper-slide">Slide 3
+                    <img src="img/huin-guleum-puleun-haneulgwa-copyspacewa-aleumdaun-yeoldae-haebyeon-bada-bada.jpg"
+                        alt="">
+                </div><!-- swiper-slide  -->
+
+                <div class="swiper-slide">Slide 4
+                    <img src="img/keto-daieoteu-eumsiggwa-hwang-geum-pokeuwa-naipeuga-issneun-du-jeobsiui-sangdan-bogi.jpg"
+                        alt="">
+                </div><!-- swiper-slide  -->
+
+                <div class="swiper-slide">Slide 5
+                    <img src="img/keto-daieoteu-sigpumgwa-abokadoga-issneun-pyeongpyeonghan-jeobsi.jpg" alt="">
+                </div><!-- swiper-slide  -->
+            </div><!-- swiper-wrapper end -->
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- swiper mySwiper end -->
+    </section><!-- section-01 end -->
+</body>
+
+</html>

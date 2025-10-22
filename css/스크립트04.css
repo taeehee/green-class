@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.mode_btn {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(186, 255, 169);
+    border-radius: 50%;
+    border: 2px solid #333;
+    display: flex; 
+    /* flex정렬 쓰는 이유: align과 justify는 flex를 썼을때만 쓸 수 있다. */
+    align-items: center;
+    justify-content: center;
+}

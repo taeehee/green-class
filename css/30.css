@@ -1,0 +1,51 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.main_visual{
+    height: 100vh;
+    
+}
+.main_visual video{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    display: block; /* 동영상과 창의 오른쪽 세로 공백, 아래공백 없애는법 */
+}
+.main_visual .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:white;
+
+}
+.main_visual .text h1{
+    font-size: 60px;
+}
+
+.main_visual .text a{ /* a는 인라인태그라서 크기변화가 이루어지지x */
+    width: 150px;
+    height: 60px;
+    display: block;
+    margin: 20px auto 0;
+    line-height: 60px;
+    /* padding: 50px, 30; */
+    background-color: #fff;
+    color: #000;
+     
+}
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건식-속성</title>
+    <link rel="stylesheet" href="css/스크립트05.css">
+    <script>
+        window.onload = () => {
+            let box = document.getElementsByClassName('box')[0]; /* 전체doc안에서 요소를 찾겠다 */
+            let boxImage = box.getElementsByTagName('img')[0]; /* box 안에서 요소를 찾겠다 */
+            let boxBtn = box.getElementsByClassName('box_btn')[0]; //.box .box_btn
+
+            boxBtn.addEventListener('click', () => {
+               //alert() 알러로 test후 주석처리
+               if(boxImage.getAttribute('src') == 'img/img-3.jpg') {
+                    //alert('조건맞음');
+                    boxImage.src = 'img/img-4.jpg'; 
+                } else {
+                    //alert('조건맞지않음');
+                    boxImage.src = 'img/img-3.jpg'; 
+               }
+
+            let section = document.getElementsByClassName('section')[0];
+            let sectionImage = section.getElementsByTagName('img')[0];
+            let sectionBtn = section.getElementsByClassName('section_btn')[0];
+
+            sectionBtn.addEventListener('click', () => {
+                if(sectionImage.getAttribute('src') == 'img/img-1.jpg') {
+                    sectionImage.src = 'img/img-2.jpg';
+                } else {
+                    sectionImage.src = 'img/img-1.jpg';
+                }
+            });
+
+            });
+        };//script end
+    </script>
+
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/img-3.jpg" alt="">
+        <button class="box_btn">🤍이미지 변경🤍</button>
+    </div><!-- box -->
+
+    <div class="section">
+        <img src="img/img-1.jpg" alt="">
+        <button class="section_btn">click 💌</button>
+    </div><!-- section -->
+</body>
+
+</html>

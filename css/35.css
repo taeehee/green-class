@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 100px;
+    position: relative;
+    z-index: 9999;
+}
+
+.header .inner {
+    height: 100%;
+    display: flex;
+    /* 로고/nav/util 가로정렬됨 */
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.header .inner .logo {
+    height: 60px;
+    /* w나 h값 1개만 준다 */
+}
+
+.header .inner .logo a {
+    height: 100%;
+    display: block;
+    /* 개발창을 보면 이미지크기보다 a영역 크기가 작고 아래로 내려와있어서 맞춰주는 작업 */
+}
+
+.header .inner .logo a img {
+    height: 100%;
+    /* 로고와 아이콘 이미지에는 object-fit: cover를 쓰지x, 가로or세로 크기만 부여 */
+}
+
+.header .inner nav {}
+
+.header .inner nav .gnb {
+    display: flex;
+}
+
+.header .inner nav .gnb>li {
+    position: relative;
+}
+
+.header .inner nav .gnb>li:hover .depth-02 {
+    /* li에 호버했을때 "뎁쓰-02"가 나타난다(display:block) */
+    display: block;
+}
+
+.header .inner nav .gnb>li .depth-01 {
+    display: block;
+    line-height: 100px;
+    padding: 0 30px;
+}
+
+.header .inner nav .gnb>li .depth-02 {
+    /*     width: 100%; */
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    border: 1px solid #333;
+
+    white-space: nowrap;
+    /* 한줄로 나열하는 역할. 줄바꿈 방지 */
+    display: none;
+}
+
+.header .inner nav .gnb>li .depth-02 li:hover {
+    background-color: blue;
+    color: #fff;
+
+}
+
+.header .inner nav .gnb>li .depth-02 li a {
+    display: block;
+    /* 커서영역을 넓히기위해서 */
+    padding: 12px 2px;
+    /* li 보다 li a에 패딩을 준다 */
+}
+
+.header .inner .util {
+    display: flex;
+    gap: 16px;
+}
+
+.main_visual {
+    height: 100vh;
+    position: relative; /* <때문에 뎁스2차가 안펼쳐짐. 그래서 헤더에 posotion, z-index추가 */
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual .text h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main_visual .text a {
+    width: 160px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 26px;
+    /* text-align: center;
+    line-height: 46px; - 테두리가 2px이므로 높이50px에서-총 테두리4px= 46px*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 100%;
+    left: 30%;
+
+}

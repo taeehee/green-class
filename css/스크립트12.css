@@ -1,0 +1,54 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.header {
+    height: 100px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_visual {
+    height: 100vh;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-01 {
+    height: 100vh;
+    background-color: rgb(80, 173, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.section-02 {
+    height: 100vh;
+    background-color: rgb(203, 236, 126);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+.top_btn {
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    right: 80px;
+    bottom: 80px;
+    border-radius: 50%;
+    background-color: rgb(171, 80, 255);
+    color: aliceblue;
+    display: none; /* 스크롤바 어느 시점부터 보이도록 */
+}
+
+.top_btn.active {
+    display: block; /* .active가 추가되면 탑버튼이 보여지도록 */
+}

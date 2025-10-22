@@ -1,0 +1,176 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* 구글폰트에서 복붙 */
+/* font-family: "Inter", sans-serif; */
+/* body에(22행)입력해줄거라 주석처리 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    position: relative;
+    background-color: #000;
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+.mobile {
+    display: none;
+    /* 데스크탑ver에서 mobile.ver은 보이지않도록 */
+}
+
+.header {
+    width: 100%;
+    height: 87.84px;
+    /* ? */
+    padding: 0 39.96px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .inner .logo {
+    width: 173.88px;
+    /* ? */
+}
+
+.header .inner .logo a {
+    width: 100%;
+    display: block;
+}
+
+.header .inner .nav_pc .gnb {
+    display: flex;
+    gap: 5px;
+    /* html에서 각gnb마다 li로 감쌌어야함 */
+}
+
+.header .inner .nav_pc .gnb li a {
+    display: block;
+    padding: 5.94px 11px;
+    /* 수치가 안잡히므로 display:block준다 */
+    font-size: 15.84px;
+}
+
+.header .inner .lang {
+    display: flex;
+    gap: 15.84px;
+}
+
+.header .inner .lang li {
+    font-size: 14.04px;
+}
+
+.header .inner .lang li:nth-child(2) {
+    color: #9f9fa1;
+}
+
+.main .main_visual {
+    height: 100vh;
+    display: flex;
+    /* img는 인라인태그이기때문에 display:flex */
+    justify-content: center;
+    align-items: center;
+}
+
+.main .main_visual img {
+    width: 757.984px;
+}
+
+/* 화면의 크기가 1024px 이하일 때 스타일 작성 */
+@media screen and (max-width: 1024px) {
+
+    .pc,
+    .header .inner .lang.pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .header {
+        height: 72px;
+        padding: 0 24px;
+    }
+
+    .header .inner .logo {
+        width: 148px;
+    }
+
+    .header .inner .nav_mobile {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        right: -100%;
+        /* 화면이 모바일크기가 되었을때 nav는 보이지않도록. (right:-100%로 화면밖 숨김) */
+        top: 0;
+        background-color: #000;
+        padding: 155px 32px 24px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        /* 오른쪽 배치 */
+        text-align: right;
+        /* 우측정렬 */
+    }
+
+    .header .inner .nav_mobile.active {
+        right: 0;
+        /* active실행하여 right:-100%로 숨겨놨던 네비게이션 불러오기 */
+    }
+
+    .header .inner .nav_mobile .close_btn {
+        position: absolute;
+        top: 17px;
+        right: 24px;
+    }
+
+    .header .inner .nav_mobile .gnb {
+        display: flex;
+        /* li사이 gap을 주기위해서 부모인 gnb에 flex와 gap부여 */
+        flex-direction: column;
+        /* flex하면 가로정렬되므로 */
+        gap: 24px;
+    }
+
+    .header .inner .nav_mobile .gnb li {
+        font-size: 55px;
+        font-weight: 700;
+    }
+
+    .header .inner .nav_mobile .gnb li a {
+        display: block;
+        /* a는 인라인태그이므로 블록 */
+        padding: 6px 8px;
+
+    }
+}
+
+/* 1024px */

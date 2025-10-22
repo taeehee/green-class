@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건식-스타일</title>
+    <link rel="stylesheet" href="css/스크립트04.css">
+    <script>
+        window.onload = () => {
+            let body = document.getElementsByTagName('body')[0]; //body
+            let modeBtn = document.getElementsByClassName('mode_btn')[0]; //.mode_btn
+            
+            modeBtn.addEventListener('click', () => {
+                //alert(); -확인하기위해 임시test하는 알러
+                //body가 가지고 있는 스타일의 배경색이 흰색이면 실행
+                //body의 배경색을 검은색으로 설정
+                //배경색이 흰색이 아니라면
+                //배경색을 흰색으로 설정
+
+                /* 
+                조건문 if(조건식) {
+                조건식이 맞으면 실행될 스크립트 코드
+                } else {
+                 조건식이 맞지않으면 실행될 스크립트 코드
+                } 
+                */
+
+                if(getComputedStyle(body).backgroundColor == 'rgb(255, 255, 255)') {
+                    //->body가 가지는 스타일을 찾겠다. 컬러는 rgb값으로 작성, 쉼표 뒤 띄어쓰기 필수
+                    //조건식이 맞으면 실행될 스크립트 코드
+                    //alert('조건맞음');
+
+                    //body에게 배경색을 검은색
+                    body.style.backgroundColor = '#000';
+                    //modeBtn.innerText = '<span>💦</span>';
+                    modeBtn.innerHTML = '<span>💦</span>';
+                } else { 
+                    //조건식이 맞지 않으면 실행될 스크립트 코드
+                    //alert('조건맞지않음');
+
+                    //body에게 배경색을 흰색
+                      body.style.backgroundColor = '#fff';
+                      modeBtn.innerHTML = '<span>💦</span>';
+                }
+            });
+        };//script end
+    </script>
+</head>
+<body>
+    <div class="mode_btn">배경색변경</div>
+</body>
+</html>
+

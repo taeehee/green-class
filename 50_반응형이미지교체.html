@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 이미지 교체</title>
+</head>
+
+<body>
+    <section class="main_visual">
+        <picture> <!-- 이미지가 들어가는 태그(동영상x). 무조건 <img>태그를 사용해줘야 함  -->
+            <source srcset="img/img-3.jpg" media="(max-width: 600px)">
+            <img src="img/img-2.jpg" alt="">
+            <!-- 기본화면에서는 <img>의 이미지, 600px보다 작을때는 src reset의 img로 변함.
+                <source>먼저 작성. img 태그와 순서가 바뀌면 적용이 안됨 -->
+        </picture>
+
+        <div class="video">
+            <video src="" class="pc"></video>
+            <video src="" class="mobile"></video>
+        </div><!-- video -->
+         <!-- <picture>안에는 <video>를 사용할 수 없으므로 <video>를 사용해야할 때는
+            div pc/ mobile 클래스명을 각각 생성하여 display: none을 이용해준다 -->
+    </section><!-- main_visual -->
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header {
+    height: 72px;
+}
+
+.header .inner {
+    width: 1280px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 48px;
+}
+
+.header .inner .logo {
+    width: 92px;
+}
+
+.header .inner .logo a{
+    height:100%;
+    display: block;
+}
+
+.header .inner .logo a img{
+    height: 100%;
+}
+
+.header .inner .menu_btn {
+    height: 26.5px;
+    border: 0;
+    background-color: transparent; /* 배경 투명하게 적용  */
+}
+
+.header .inner .menu_btn img {
+    height: 100%;
+}
+
+.header .inner .nav {
+    width: 521px;
+    height: 953px;
+    background-color: #141a24;
+    position: fixed;
+    right: -100%;
+    top: 100px;
+    padding: 70px;
+    display: none;
+    transition: right 0.7s linear;
+    overflow-y: auto; /* 내용이 넘치면 스크롤바를 만들어준다 */
+}
+
+
+
+.header .inner .nav .gnb {
+}
+
+.header .inner .nav .gnb li {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 170%;
+}
+
+.main .main_visual {
+    position: relative;
+    z-index: -1;
+}
+
+.main .main_visual .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.main .main_visual .text h1 {
+    font-size: 95px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.main .main_visual .text p {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 170%;
+}

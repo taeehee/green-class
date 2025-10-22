@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-01 {
+    width: 1200px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.section-01 .swiper-slide {
+    height: 400px;
+}
+
+.section-01 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-01 .swiper-button-next,
+.section-01 .swiper-rtl .swiper-button-prev {
+    background: url('../img/next2.png') center center / 100% no-repeat; /* 위치,위치,크기,반복 */
+    right: -50px;  /* 슬라이드 밖으로 아이콘 이동 */  
+}
+
+.section-01 .swiper-button-prev,
+.section-01 .swiper-rtl .swiper-button-next {
+    background: url('../img/pre2.png') center center / 100% no-repeat;
+    left: -50px;
+}
+
+.section-01 .swiper-button-next:after,
+.section-01 .swiper-button-prev:after {
+    display: none; /* 원래있던 화살표 슬라이드 아이콘 보이지않게 설정 */
+}
+
+.section-01 .swiper {
+    position: static; /* 포지션 초기화(기본값)하기, 
+    section-01에 포지션:relative 주기 */
+}

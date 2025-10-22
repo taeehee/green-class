@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form {
+    max-width: 800px;
+    width: calc(100% - 40px);
+    margin: 50px auto;
+    border: 1px solid #333;
+    padding: 20px;
+}
+
+.form .box label {
+    display: block; /* 입력폼 줄바꿈 */
+}
+
+.form .box input [type="text"],
+.form .box input [type="password"] {
+    /* 태그안에 있는 특정 속성값을 지정해줄 때: 대괄호 사용*/
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.form .box input::placeholder {
+    font-size: 14px;
+    color: rgb(202, 145, 255);
+}
+
+.form .box input:focus {
+    /* focus: tap눌렀을때 현재 영역을 나타내기위한 강조된 box */
+    /*  첫번째 방법
+    outline: 3px solid #ff0000;
+    border: 0;  */
+
+    /* 두번째 방법 */
+    outline: none;
+    border: 3px dashed red;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+}
+
+.form .check ul {
+    display: flex;
+    gap: 12px;
+}
+
+.form .check ul li input {
+    display: none;
+}
+
+.form .check ul li label {
+    height: 40px;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form .check ul li input:checked + label {
+    /*  */
+    border: 1px solid tomato;
+}
+

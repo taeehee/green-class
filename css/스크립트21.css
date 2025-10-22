@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.nav_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    /* nav-01이 펼쳐질 때마다 nav-02,03의 h값이 같이 늘어나서  */
+    margin: 50px;
+}
+
+.nav_wrap .nav {
+    width: 30%;
+}
+
+.nav_wrap .nav .gnb {
+    border: 2px solid rgb(255, 148, 166);
+    border-radius: 12px;
+}
+
+.nav_wrap .nav .gnb>li {}
+
+.nav_wrap .nav .gnb>li a.depth-01 {
+    height: 60px;
+    display: block;
+    /* a태그이므로 */
+    border-bottom: 2px solid rgb(255, 148, 166);
+    background-color: rgb(253, 214, 221);
+    line-height: 60px;
+    padding: 0 20px;
+    font-weight: 500;
+    color: rgb(0, 136, 214);
+    position: relative;
+}
+
+.nav_wrap .nav .gnb>li:nth-child(1) a.depth-01 {
+    border-radius: 12px 12px 0 0;
+}
+.nav_wrap .nav .gnb>li:nth-child(3) a.depth-01 {
+    border-radius: 0 0 12px 12px;
+}
+
+.nav_wrap .nav .gnb>li a.depth-01::before {
+    /* 화살표: 가상요소 선택자로 아이콘 넣기. w,h값과 position이 있어야 함 */
+    content: '';
+    width: 16px;
+    height: 100%;
+    background:url('../img/아이콘/ep_arrow-down.svg') center center / 100% no-repeat;
+    position: absolute;
+    top: 0;
+    right: 20px; 
+}
+
+.nav_wrap .nav .gnb>li a.depth-01.active::before {
+    transform: rotate(180deg); /* 화살표 180도 회전 */
+}
+
+.nav_wrap .nav .gnb>li .depth-02 {
+    display: none;
+    color: rgb(255, 148, 166);
+}
+
+.nav_wrap .nav .gnb>li .depth-02 li {
+    height: 60px;
+    border-bottom: 2px dashed rgb(247, 216, 221);
+}
+
+.nav_wrap .nav .gnb>li .depth-02 li a {
+    display: block;
+    padding: 20px;
+}
+
+.nav_wrap .nav.nav-01 .gnb>li a.depth-01.active {
+    background-color: blanchedalmond;
+}
+
+.nav_wrap .nav.nav-02 .gnb>li a.depth-01.active {
+    background-color: blanchedalmond;
+}
+
+.nav_wrap .nav.nav-03 .gnb>li a.depth-01.active {
+    background-color: blanchedalmond;
+}

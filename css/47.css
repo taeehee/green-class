@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import url('reset.css');
+/* css파일끼리 연결하는 작성법. 따옴표안에 연결할 파일 경로를 써주면 됨 */
+@import url('47common.css');
+/* 공통 스타일 작성. ctrl+클릭(새파일 생성) */
+
+
+/* .main */
+/* .main_visual */
+.main_visual {
+    height: calc(100vh - 100px);
+    /* 헤더h값:100px */
+    position: relative;
+}
+
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main_visual .text {
+    max-width: 1400px;
+    width: calc(100% - 32px);
+    /*  margin: 0 auto; 포지션떄문에 적용안됨 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(250, 248, 132);
+}
+
+.main_visual .text h2 {
+    font-size: 80px;
+    font-family: 'SB-Aggro';
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.main_visual .text p {
+    font-size: 20px;
+}
+
+/* section */
+.section-01 {
+    padding: 160px 0;
+}
+
+.section-01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-01 .list .item {
+    width: 23.21%; /* 가로크기:325px설정, 컨테이너:1440 */
+}
+
+.section-01 .list .item a {
+    width: 100%;
+    height: 100%;
+    display: block; /* a태그이므로 */
+}
+
+.section-01 .list .item a .image {
+    padding-bottom: 109.84%; /* 높이/너비*100=% 357/325*100=%*/
+    position: relative; /* 이미지 비율 유지하며 사진 확대.축소 -> padding-buttom, position  */
+}
+
+.section-01 .list .item a .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section-01 .list .item a p {}

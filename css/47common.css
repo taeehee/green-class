@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* 웹폰트 */
+@import url('../font/aggro/stylesheet.css');
+/* css폴더 밖이므로 ../를 붙여준다 */
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-display: swap;
+}
+
+/* 두께 400짜리만.(불필요한 폰트 다 작성하지 않는다) */
+
+body {
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+.inner {
+    max-width: 1400px;
+    width: calc(100% - 32px);
+    margin: 0 auto;
+}
+
+.main .title {
+    margin-bottom: 60px;
+}
+
+.main .title h3 {
+    font-size: 60px;
+    font-family: 'SB-Aggro';
+    /* stylesheet.css파일에서 폰트 이름 복붙 */
+    font-weight: bold;
+}
+
+.main .title p {
+    font-size: 20px;
+}
+
+/* common에는 공통적인 부분- 헤더, 푸터 */
+
+/* header */
+.header {
+    height: 100px;
+}
+
+.header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* h값이 있어야 적용됨 */
+}
+
+.header .inner .logo {
+    height: 40px;
+}
+
+.header .inner .logo a {
+    height: 100%;
+    display: block; /* a태그는 인라인태그이므로 */
+}
+
+.header .inner .logo a img {
+    height: 100%;
+}
+
+.header .inner .nav .gnb {
+    display: flex;
+}
+
+.header .inner .nav .gnb > li {
+    position: relative;
+}
+
+.header .inner .nav .gnb > li .depth-01 {
+    display: block; /* 뎁쓰-01은 a태그이므로 */
+    line-height: 100px;
+    padding: 0 40px;
+}
+
+.header .inner .nav .gnb > li .depth-02 {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: aliceblue;
+    text-align: center;
+    display: none; /* 기본: 숨김 */
+}
+
+.header .inner .nav .gnb > li .depth-02 li{
+    display: block;
+    padding: 10px;
+}
+
+.header .inner .util {
+    display: flex;
+    gap: 16px;
+}
+
+/* footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 80px 0;
+}

@@ -1,0 +1,72 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Gmarket-Sans';
+    src: url('../font/gmarketsans/GmarketSansTTFBold.eot');
+    src: url('../font/gmarketsans/GmarketSansTTFBold.eot?#iefix') format('embedded-opentype'),
+        url('../font/gmarketsans/GmarketSansTTFBold.woff2') format('woff2'),
+        url('../font/gmarketsans/GmarketSansTTFBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket-Sans';
+    src: url('../font/gmarketsans/GmarketSansTTFLight.eot');
+    src: url('../font/gmarketsans/GmarketSansTTFLight.eot?#iefix') format('embedded-opentype'),
+        url('../font/gmarketsans/GmarketSansTTFLight.woff2') format('woff2'),
+        url('../font/gmarketsans/GmarketSansTTFLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket-Sans';
+    src: url('../font/gmarketsans/GmarketSansTTFMedium.eot');
+    src: url('../font/gmarketsans/GmarketSansTTFMedium.eot?#iefix') format('embedded-opentype'),
+        url('../font/gmarketsans/GmarketSansTTFMedium.woff2') format('woff2'),
+        url('../font/gmarketsans/GmarketSansTTFMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Yeongwol';
+    src: url('../font/yeongwol/YeongwolTTF-Regular.eot');
+    src: url('../font/yeongwol/YeongwolTTF-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/yeongwol/YeongwolTTF-Regular.woff2') format('woff2'),
+        url('../font/yeongwol/YeongwolTTF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.font p{
+    font-family: 'Gmarket-Sans';
+}
+
+.font p:nth-child(1){
+    font-weight: 300;
+}
+ .font p:nth-child(2){
+    font-weight: 500;
+ }
+ .font p:nth-child(3){
+    font-weight: bold;
+ }

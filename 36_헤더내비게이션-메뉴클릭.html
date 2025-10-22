@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴클릭</title>
+    <link rel="stylesheet" href="css/36.css">
+
+    <!-- 바닐라 자바스크립트 -->
+     <script>
+        window.onload = () => {
+            //메뉴(.menu_btn)을 클릭했을 때
+            //내비게이션(.nav)에게 클래스명 active 추가/삭제(toggle)
+
+            //document.querySelector('.menu_btn')
+            document.querySelector('.menu_btn').addEventListener('click', () => {
+                document.querySelector('.nav').classList.toggle('active'); /* classList L대문자로 써져야함 */
+                document.querySelector('body').classList.toggle('active'); 
+            })
+        };//script end
+     </script>
+</head>
+
+<body>
+<header class="header">
+    <div class="inner">
+        <h1 class="logo">
+            <a href="#"><img src="/img/target.png" alt="타겟로고"></a>
+        </h1><!-- logo end -->
+        <button class="menu_btn">
+            <img src="/img/아이콘/menu.png" alt="메뉴보기">
+        </button><!-- .menu_btn end -->
+
+        <nav class="nav">
+            <ul class="gnb">
+                <li>
+                   <a href="#" class="depth-01">메뉴 1</a>
+                   <ul class="depth-02">
+                    <li><a href="#">첫번째 메뉴-1</a></li>
+                    <li><a href="#">첫번째 메뉴-2</a></li>
+                    <li><a href="#">첫번째 메뉴-3</a></li>
+                    <li><a href="#">첫번째 메뉴-4</a></li>
+                    <li><a href="#">첫번째 메뉴-5</a></li>
+                   </ul><!-- .depth-02 end -->
+                </li>
+                <li>
+                   <a href="#" class="depth-01">메뉴 2</a>
+                   <ul class="depth-02">
+                    <li><a href="#">두번째 메뉴-1</a></li>
+                    <li><a href="#">두번째 메뉴-2</a></li>
+                    <li><a href="#">두번째 메뉴-3</a></li>
+                    <li><a href="#">두번째 메뉴-4</a></li>
+                    <li><a href="#">두번째 메뉴-5</a></li>
+                   </ul><!-- .depth-02 end -->
+                </li>
+                <li>
+                   <a href="#" class="depth-01">메뉴 3</a>
+                   <ul class="depth-02">
+                    <li><a href="#">세번째 메뉴-1</a></li>
+                    <li><a href="#">세번째 메뉴-2</a></li>
+                    <li><a href="#">세번째 메뉴-3</a></li>
+                    <li><a href="#">세번째 메뉴-4</a></li>
+                    <li><a href="#">세번째 메뉴-5</a></li>
+                   </ul><!-- .depth-02 end -->
+                </li>
+                <li>
+                   <a href="#" class="depth-01">메뉴 4</a>
+                   <ul class="depth-02">
+                    <li><a href="#">네번째 메뉴-1</a></li>
+                    <li><a href="#">네번째 메뉴-2</a></li>
+                    <li><a href="#">네번째 메뉴-3</a></li>
+                    <li><a href="#">네번째 메뉴-4</a></li>
+                    <li><a href="#">네번째 메뉴-5</a></li>
+                   </ul><!-- .depth-02 end -->
+                </li>
+                <li>
+                   <a href="#" class="depth-01">메뉴 5</a>
+                   <ul class="depth-02">
+                    <li><a href="#">다섯번째 메뉴-1</a></li>
+                    <li><a href="#">다섯번째 메뉴-2</a></li>
+                    <li><a href="#">다섯번째 메뉴-3</a></li>
+                    <li><a href="#">다섯번째 메뉴-4</a></li>
+                    <li><a href="#">다섯번째 메뉴-5</a></li>
+                   </ul><!-- .depth-02 end -->
+                </li>
+            </ul><!-- .gnb end -->
+        </nav><!-- .nav end -->
+    </div><!-- .inner end -->
+</header><!-- .header end -->
+
+<main class="main">
+    <section class="main_visual">
+        <img src="/img/img-2.jpg" alt="">
+    </section><!-- .main visual end -->
+</main><!-- main end -->
+    
+</body>
+</html>

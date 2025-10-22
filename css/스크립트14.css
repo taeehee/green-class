@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import url('reset.css');
+.section {
+    background-color: #eee;
+    padding: 100px 0;
+}
+
+.section .inner {
+    max-width: 1280px;
+    width: calc(100% - 40px);
+    /* 좌우마진20 */
+    margin: 0 auto;
+}
+
+.section .inner h3 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.section .inner .tab_menu {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.section .inner .tab_menu li {
+    height: 40px;
+    background-color: #fff;
+    padding: 0 20px;
+    border-radius: 20px;
+    line-height: 40px;
+}
+.section .inner .tab_menu li.active {
+    background-color: rgb(255, 4, 4);
+    color:#fff
+}
+
+.section .inner .list {
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+
+.section .inner .list.active {
+    display: flex;
+}
+
+.section .inner .list .item {
+    width: 24%;
+}
+
+.section .inner .list .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.section .inner .list .item strong {}

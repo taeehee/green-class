@@ -1,0 +1,22 @@
+:root { /* 네이밍 규칙이 정해진 회사도 있고 없다면 내가 설정 */
+    --fontSize-heading1: 56px;
+    --fontSize-md: 18px;
+    --fontSize-sm: 15px;
+    --fontSize-xs: 13px; /* 이후는 xxs..표기 */
+
+    --color-text: #000000;
+    --color-point: #ea002c; /* 포인트컬러 */
+    --color-border: #d9d9d9;
+
+    --margin-b-lg: 40px; /* margin-bottom-큰 영역 */
+    --margin-b-md: 40px; /* margin-bottom-중간 영역 */
+}
+
+@media screen and (max-width: 767px) {
+    :root {
+        --fontSize-heading1: 32px;
+
+        --margin-b-lg: 20px;
+        --margin-b-md: 16px;
+    }  
+}

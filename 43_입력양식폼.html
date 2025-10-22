@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력양식폼</title>
+    <link rel="stylesheet" href="css/43.css">
+</head>
+
+<body>
+    <h2>
+        <입력 양식 데이터 전송>
+    </h2>
+    <form action="page.jsp" method="post"><!-- 전송버튼을 클릭하면 page.jsp파일로 입력한 값이 전송됨 -->
+
+        <p>ID : <input type="text" name="id" id=""></p> <!-- input:text라고 입력 (타입지정은 :로 입력) -->
+        <p>PW : <input type="password" name="psw" id=""></p> <!-- input:password라고 입력 -->
+
+        <label for="for-name">이름</label>
+        <input type="text" name="name" id="for-name" required placeholder="이름을 입력해주세요">
+
+        <textarea name="텍스트작성공간" id="" row="5" cols="20"> </textarea>
+        <!-- 크기는 row, cols를 이용하서 지정하거나 style에서 width 값을 줄 수 있다.
+        (row, cols(영문기준) :  세로 줄:5, 가로 글자수: 20자) -->
+
+
+        <div class="radio">
+            <h3>당신의 강의실은 몇호입니까?</h3>
+            <label for="1">1001호</label>
+            <input type="radio" name="classroom" value="room1" id="1" checked>  
+            <!-- input타입:라디오 -> 동그라미 버튼형식 -->
+            <!-- checked: 첫 버튼에 기본선택되어있게 함. -->
+            <!-- for값과 id명을 동일하게 지정하면 동그라미 버튼이 아닌 text를 눌러도 선택이 되게 됨 -->
+
+            <label for="2">1002호</label>
+            <input type="radio" name="classroom" value="room2" id="2">
+
+            <label for="3">1003호</label>
+            <input type="radio" name="classroom" value="room3" id="3">
+
+            <label for="4">1004호</label>
+            <input type="radio" name="classroom" value="room4" id="4">
+        </div><!-- radio -->
+        <!-- 라디오는 개별, 체크박스는 다중 선택 가능 -->
+
+
+        <div class="check">
+            <h3>현재 관심을 가지고 있는 학습 주제는 무엇입니까?</h3>
+            <label for="5">html5</label>
+            <input type="checkbox" name="subject" value="html5" id="5" checked> <!-- checked: 첫 버튼에 기본선택되어있게 함. -->
+
+            <label for="6">css3</label>
+            <input type="checkbox" name="subject" value="css3" id="6">
+
+            <label for="7">javascript</label>
+            <input type="checkbox" name="subject" value="javascript" id="7">
+
+            <label for="8">jquery</label>
+            <input type="checkbox" name="subject" value="jquery" id="8">
+        </div><!-- check -->
+        <!-- 라디오는 개별, 체크박스는 다중 선택 가능 -->
+
+
+        <div class="button">
+            <h3>button 태그 사용</h3>
+            <button type="button">버튼태그</button><!-- button 태그를 input태그 보다 더 많이 사용함. -->
+
+            <h3>input 태그 사용</h3>
+            <input type="button" value="input태그"> <!-- (타입지정은 :로 입력) -->
+        </div><!-- button -->
+
+
+        <div class="select">
+            <h3>관심있는 학습주제 한 가지를 선택하세요</h3>
+            <select name="subjects">
+                <option value="1" selected>html5</option>
+                <option value="2">css3</option>
+                <option value="3">javascript</option>
+                <option value="4">jquery</option>
+            </select><!-- subjects -->
+        </div><!-- select -->
+
+
+        <div class="select-link">
+            <h3>관련 사이트</h3>
+            <select name="" id="" onchange="window.open(value, '_blank')">
+                <option value="">관련사이트</option>
+
+                <optgroup>
+                    <option value="https://www.naver.com/">네이버</option>
+                    <option value="https://www.gdweb.co.kr/main/">gdweb</option>
+                    <option value="https://www.w3schools.com/">w3school</option>
+                </optgroup>
+            </select>
+        </div><!-- select-link -->
+
+        
+        <h3>숫자입력 양식</h3>
+        <input type="number" name="" id="">
+        <!-- only숫자입력.한글x. 방향키로 숫자 조절 가능. -->
+
+        <h3>날짜 양식</h3>
+        <input type="date" name="" id="" value="2025-01-01">
+
+        <h3>시간 양식</h3>
+        <input type="time" name="" id="" value="09:00">
+
+        <h3>색상선택 양식</h3>
+        <input type="color" name="" id="" value="#ff0000">
+
+
+        <input type="submit" value="전송">
+        <input type="reset" value="다시작성">
+
+    </form>
+</body>
+
+</html>

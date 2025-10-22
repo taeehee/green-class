@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list .item {
+    width: 30%;
+    margin: 20px;
+}
+.list .item button {
+    height: 60px;
+    border: 2px solid rgb(51, 129, 247);
+    padding: 0 28px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: rgb(51, 129, 247);
+}
+.list .item .image {
+    height: 500px;
+}
+
+.list .item .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

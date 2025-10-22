@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탑버튼</title>
+    <link rel="stylesheet" href="css/스크립트18.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        window.onload = () => {
+            let topJavascript = document.querySelector('.javascript'); //.javascript
+            let topJquery = $('.jquery'); //.jquery  $:(제이쿼리라는 의미)
+
+            //자바스크립트를 이용한 탑 버튼 구현
+            topJavascript.addEventListener('click', () => {
+                window.scrollTo({
+                    top : 0,
+                    behavior : 'smooth' /* 컴퓨터 설정>접근성>애니메이션표시: ‘켬’ 이 되어있어야 적용됨 */
+                })
+            });
+
+
+            //제이쿼리를 이용한 탑 버튼 구현
+            //cdn js
+            topJquery.on('click', function(){
+                $('html, body').animate({
+                    scrollTop : 0
+                },1000) /* animate 닫히는 중괄호 사이에 숫자(속도)입력 1000=1s */
+            });
+
+        };//script end
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, beatae, aspernatur rerum ea consequatur amet fugiat vero sed quae aperiam doloremque. Iste, ipsa! Quidem quis impedit, aperiam quaerat facilis quas.</p>
+
+    <div class="btn">
+        <button type="button" class="javascript">탑 자바스크립트</button>
+        <button type="button" class="jquery">탑 제이쿼리</button>
+    </div><!-- btn -->
+</body>
+</html>

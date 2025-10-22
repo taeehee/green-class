@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Reenie Beanie';
+    src: url('ReenieBeanie.eot');
+    src: url('ReenieBeanie.eot?#iefix') format('embedded-opentype'),
+        url('ReenieBeanie.woff2') format('woff2'),
+        url('ReenieBeanie.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

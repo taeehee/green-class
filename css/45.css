@@ -1,0 +1,49 @@
+@charset "utf-8";
+*{
+    margin: 15px;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.image img {
+    width: 300px;
+    /* png는 깨짐. svg는 선명도 유지 */
+}
+
+.svg_image svg:hover path {
+    /* 이미지 호버했을 때 -> fil:색상변경 */
+    fill: aqua;
+}
+
+.svg_image-02 {
+    position: relative;
+}
+
+.svg_image-02 p {
+    width: 50px;
+    height: 50px;
+    background-color: blueviolet;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    offset: path('M130.424 3.17662C130.927 -1.05888 137.073 -1.05888 137.576 3.17662L141.792 38.7086C147.236 84.59 183.41 120.764 229.291 126.208L264.823 130.424C269.059 130.927 269.059 137.073 264.823 137.576L229.291 141.792C183.41 147.236 147.236 183.41 141.792 229.291L137.576 264.823C137.073 269.059 130.927 269.059 130.424 264.823L126.208 229.291C120.764 183.41 84.59 147.236 38.7086 141.792L3.17662 137.576C-1.05888 137.073 -1.05888 130.927 3.17662 130.424L38.7086 126.208C84.59 120.764 120.764 84.59 126.208 38.7086L130.424 3.17662Z');
+    animation: svgImage 5s infinite linear;
+    /* name / duration / iteration-count / timing-function */
+}
+
+@keyframes svgImage {
+    0% {
+        offset-distance: 0;
+    }
+    100% {
+        offset-distance: -100%;
+    }
+}

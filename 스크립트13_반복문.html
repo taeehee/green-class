@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+    <style>
+        .menu li.active {
+            color: red;
+        }
+    </style>
+    <script>
+        window.onload = () => {
+            let menu = document.querySelectorAll('.menu li');
+            //반복문
+            //for(초기식; 조건식; 증감식) {실행코드}
+            for(let i = 0; i < menu.length; i++) {
+                menu[i].addEventListener('click', () => {
+                    console.log(i)
+                    menu[i].classList.add('active');
+                });
+            }
+        };//script end
+    </script>
+</head>
+<body>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가운데스타일변화</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/04.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 20,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+            var swiper = new Swiper(".scale-swiper", {
+                slidesPerView: 3,
+                spaceBetween: 0,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <section class="section-01">
+        <!-- slides per view -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/puleun-haneulgwa-joyonghan-bada.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 1</p>
+                    </div><!-- text end -->
+                </div><!--swiper-slide end  -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-sigpumgwa-sigeumchiga-issneun-jeobsiui-sang-wi-byu.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 2</p>
+                    </div><!-- text end -->
+                </div><!--swiper-slide end  -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-sigpumgwa-gyeongwalyuga-pohamdoen-nop-eun-gagdoui-jeobsi.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 3</p>
+                    </div><!-- text end -->
+                </div><!--swiper-slide end  -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-sigpumgwa-abokadoga-issneun-pyeongpyeonghan-jeobsi.jpg" alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 4</p>
+                    </div><!-- text end -->
+                </div><!--swiper-slide end  -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-eumsiggwa-hwang-geum-pokeuwa-naipeuga-issneun-du-jeobsiui-sangdan-bogi.jpg"
+                        alt="">
+                    <div class="text">
+                        <h2>swiper-slide</h2>
+                        <p>slide 5</p>
+                    </div><!-- text end -->
+                </div><!--swiper-slide end  -->
+
+            </div><!-- swiper-wrapper end  -->
+            <div class="swiper-pagination"></div>
+        </div><!--swiper mySwiper end  -->
+    </section><!-- section-01 end -->
+
+    <section class="section-02">
+        <!-- slides per view -->
+        <div class="swiper scale-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/aenimeisyeon-mujigae-pung-gyeong.jpg" alt="">
+                    <p>swiper1</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/hotel-lijoteu-geoui-bada-bada-haebyeon-eseo-aleum-daun-yaoe-suyeongjang.jpg" alt="">
+                    <p>swipe2</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/huin-guleum-puleun-haneulgwa-copyspacewa-aleumdaun-yeoldae-haebyeon-bada-bada.jpg"
+                        alt="">
+                    <p>swiper3</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-eumsiggwa-hwang-geum-pokeuwa-naipeuga-issneun-du-jeobsiui-sangdan-bogi.jpg"
+                        alt="">
+                    <p>swiper4</p>
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-sigpumgwa-abokadoga-issneun-pyeongpyeonghan-jeobsi.jpg" alt="">
+                    <p>swiper5</p>
+                </div><!-- swiper-slide end -->
+
+            </div><!--swiper-wrapper end  -->
+            <div class="swiper-pagination"></div>
+        </div><!-- slides per view end -->
+    </section><!-- section-02 end -->
+
+
+</body>
+
+</html>

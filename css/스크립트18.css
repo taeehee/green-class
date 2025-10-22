@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import url(reset.css);
+
+body {
+    height: 3000px; /* 스크롤때문에 h길게 잡음 */
+}
+
+.btn {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+
+}
+
+.btn button {
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+    border: 2px solid chartreuse;
+    
+    margin: 20px 0;
+    display: block;
+    border-radius: 50px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 100px;
+}

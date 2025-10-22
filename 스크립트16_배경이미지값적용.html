@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지값적용</title>
+    <link rel="stylesheet" href="css/스크립트16.css">
+    <script>
+        window.onload = () => {
+            let section = document.querySelector('.section') //.section
+            let item = section.querySelectorAll('.item') //.item
+            let itemImage = section.querySelectorAll('.item_image')//.item_image
+            //.item과 item_image는 section안에 있으므로 document대신 section으로 설정해주면 더 빨리 찾을 수 있다.
+
+            //for
+            //item에게 마우스 올렸을 때(mouseenter)
+            //section에게 스타일적용 backgroundImage으 값을 적용
+            //= 'url(파일명.확장자명)'
+            for ( let i = 0; i < item.length; i++) {
+                item[i].addEventListener('mouseenter', () => {
+                    //itemImage[i].src
+                    console.log(itemImage[i].src)
+                    // section.style.backgroundImage = 'url("img/img-2.jpg")'; 
+                    //css에서는 ../의 경로로 입력했다면, 스크립트에서는 html기준으로 작성되어야한다
+
+                    section.style.backgroundImage = 'url(' + itemImage[i].src + ')';
+                });
+            };
+
+        };//script end
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <div class="inner">
+            <h3>section title</h3>
+            <div class="list">
+                <div class="item">
+                    <img src="img/img-1.jpg" alt="" class="item_image"> <!-- img태그 안에 class명 추가 -->
+                    <div class="text">
+                        <h2>item 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eaque aspernatur maiores harum rerum sint ea delectus at consequuntur debitis labore, blanditiis saepe velit perferendis officia dolor praesentium inventore provident.</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-2.jpg" alt="" class="item_image"> <!-- img태그 안에 class명 추가 -->
+                    <div class="text">
+                        <h2>item 2</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eaque aspernatur maiores harum rerum sint ea delectus at consequuntur debitis labore, blanditiis saepe velit perferendis officia dolor praesentium inventore provident.</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-3.jpg" alt="" class="item_image"> <!-- img태그 안에 class명 추가 -->
+                    <div class="text">
+                        <h2>item 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eaque aspernatur maiores harum rerum sint ea delectus at consequuntur debitis labore, blanditiis saepe velit perferendis officia dolor praesentium inventore provident.</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+
+                <div class="item">
+                    <img src="img/img-4.jpg" alt="" class="item_image"> <!-- img태그 안에 class명 추가 -->
+                    <div class="text">
+                        <h2>item 4</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eaque aspernatur maiores harum rerum sint ea delectus at consequuntur debitis labore, blanditiis saepe velit perferendis officia dolor praesentium inventore provident.</p>
+                    </div><!-- text -->
+                </div><!-- item -->
+            </div><!-- list -->
+
+        </div><!-- inner -->
+        </section0><!-- section -->
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다중슬라이드</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/02.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = () => {
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2.5, /* 보여질 슬라이드 갯수, 소숫점도 가능 */
+                spaceBetween: 30, /* 이미지 사이 간격 */
+                pagination: {
+                    el: ".swiper-pagination", /* 페이지네이션: 사진하단 동그라미 */
+                    clickable: true, /* 페이지네이션 클릭여부 */
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 2500, /* 슬라이드 지연시간 */
+                    disableOnInteraction: false, /* true:사용자가 슬라이드를 조작하면 자동재생 중단 */
+                },
+                speed: 1000 /* 슬라이드 돌아가는 시간 */
+            });
+        }
+    </script>
+</head>
+
+
+<body>
+    <section class="section-01">
+        <!-- slide per view -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1
+                    <img src="img/aenimeisyeon-mujigae-pung-gyeong.jpg" alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">Slide 2
+                    <img src="img/huin-guleum-puleun-haneulgwa-copyspacewa-aleumdaun-yeoldae-haebyeon-bada-bada.jpg"
+                        alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">Slide 3
+                    <img src="img/hotel-lijoteu-geoui-bada-bada-haebyeon-eseo-aleum-daun-yaoe-suyeongjang.jpg" alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">Slide 4
+                    <img src="img/keto-daieoteu-eumsiggwa-hwang-geum-pokeuwa-naipeuga-issneun-du-jeobsiui-sangdan-bogi.jpg"
+                        alt="">
+                </div><!-- swiper-slide end -->
+
+                <div class="swiper-slide">Slide 5
+                    <img src="img/keto-daieoteu-sigpumgwa-abokadoga-issneun-pyeongpyeonghan-jeobsi.jpg" alt="">
+                </div><!-- swiper-slide end -->
+            </div><!-- swiper-wrapper -->
+
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- swiper mySwiper end -->
+
+    </section><!-- section-01 end-->
+</body>
+
+</html>

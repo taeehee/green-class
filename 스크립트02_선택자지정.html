@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자지정</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .popup {
+            width: 400px;
+        }
+        .popup img{
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block; /* 이미지 아래쪽 여백 없애기 */
+        }
+        .popup button {
+            width: 100%;
+            height: 50px;
+            background-color: rgb(255, 255, 183);
+            border: 1px solid #333;
+        }
+        .box{
+            width: 300px;
+        }
+        .box img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+        .box button {
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+    
+    <script>
+        window.onload = () => {
+            //요소찾기(선택자찾기)
+            // document.getElementsByTagName('button')[0];
+            //[0]: 인덱스값은 필수이며 0부터 시작
+
+            //버튼을 클릭했을 때 실행
+            //클래스명 text-02에게 스타일 컬러값 red 적용
+
+            //변수 : 데이터를 담는 그릇
+            //변수선언 변수명 = 데이터;
+            //let letName = 데이터;
+
+            let btn = document.getElementsByTagName('button')[0];
+            let text01 = document.getElementsByTagName('div')[0];
+            let text02 = document.getElementsByClassName('text-02')[0];
+            let text03 = document.getElementById('text-03'); /* id는 인덱스값을 쓰지X (태그, 클래스명과 달리 고유명을 가지기 때문) */
+
+            btn.addEventListener('click', () => {
+                text02.style.color = 'red';
+                /* ByClassname을 썼기때문에 괄호속에 .으로 클래스표시x, 클래스명 중에 첫번째이므로 인덱스: [0]*/
+                //첫번째 div에게 스타일 배경(backgroundColor) = '컬러값';
+                text01.style.backgroundColor = 'yellow';
+                //변수명 text03에게 스타일 적용 글자크기 = '30px';
+                text03.style.fontSize = '30px';
+                //변수명 text03에게 스타일적용 글자두께 = 'bold';
+                text03.style.fontWeight = 'bold';
+            }); /* 마무리 세미콜론은 필수는 아니지만 권장 */
+
+            //팝업닫기
+            //버튼을 클릭했을 때 실행
+            //클래스명 popup이 없어짐(스타일 적용 display 사용) 
+
+            let popup = document.getElementsByClassName('popup')[0];//클래스명 popup
+            let popupBtn = document.getElementsByTagName('button')[1];//버튼태그
+
+             popupBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+             });
+
+
+             //이미지변경
+             //img, button
+             let boxImage = document.getElementsByTagName('img')[1]; //img태그
+             let boxBtn = document.getElementsByTagName('button')[2]; //button태그
+             
+             //버튼 클릭했을 때 실행
+             //이미지의 src값 변경(변수명.src = 'img/파일명.확장자명') <경로 수기로 작성해야함.
+             boxBtn.addEventListener('click', () => {
+                boxImage.src = 'img/img-3.jpg';
+                boxBtn.innerText = '💝';
+             });
+            
+
+        }; //script end
+    </script>
+</head>
+
+<body>
+    <button>버튼</button>
+    <div>내용 1</div>
+    <div class="text-02">내용 2</div>
+    <div id="text-03">내용 3</div> <!-- id는 #으로 작성 -->
+
+    <div class="popup">
+        <img src="img/img-1.jpg" alt="">
+        <button>팝업닫기</button>
+    </div><!-- popup -->
+
+    <div class="box">
+        <img src="img/img-2.jpg" alt="">
+        <button>이미지변경</button>
+    </div><!-- box -->
+
+</body>
+
+</html>

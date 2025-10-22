@@ -1,0 +1,146 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.section{
+    width: 1920px;
+    margin: 160px 320px;
+}
+
+.section .inner{
+    width: 1280px; 
+}
+.section .inner h2 {
+    font-size: 70px;
+    margin-bottom: 40px;
+}
+
+.section .inner .list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section .inner .list .left {
+    width: 627px;
+}
+.section .inner .list .left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section .inner .list .right{
+    width: 626px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 30px;
+    /* gap은 item사이 띄어주는 역할 *
+    gap을 안쓸거면 아래 item스타일에서 마진-바텀을 써야한다/
+}
+
+.section .inner .list .left .right .item {
+   width: 229px;
+   height: 229px;
+   /* margin-bottom: 30px; */
+}
+
+.section .inner .list .left .right .item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-02{
+    width: 1920px;
+    padding: 160px 320px;
+}
+.section-02 .inner{
+    width: 1280px;
+}
+.section-02 .inner h2{
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.section-02 .inner ul{
+    width: 689px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.section-02 .inner li{
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 10.5px 20px;
+    font-size: 16px;
+    margin-bottom: 19px;
+}
+.section-02 .inner .list{
+    display: flex;
+    justify-content: space-between;
+    
+    
+
+}
+
+.section-02 .inner .list .left{
+    width: 636.95px;
+    display: flex;  
+}
+
+.section-02 .inner .list .left img{
+    width: 636.95px;
+    height: 627px;
+    margin-right: 28.49px ;
+}
+
+.section-02 .inner .list .right{
+    width: 614.56px;
+    height: 628px;
+    
+
+}
+.section-02 .inner .list .item{
+    width: 614.56px;
+    height: 190px;
+    display: flex;
+    margin-bottom: 29px;
+    
+}
+.section-02 .inner .list .right img{
+    width: 193.32px;
+    height: 190px;
+   /*  margin-left: 28.49px; */
+
+}
+.section-02 .inner .list .right .text{
+    width: 392.75px;
+    height: 140px;
+    
+}
+.section-02 .inner .list .right .text h6{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.section-02 .inner .list .right .text p{
+font-size: 22px;
+font-weight: 400;
+margin-bottom: 25px;
+align-items: center;
+}
+.section-02 .inner .list .right .text h4{
+font-size: 30px;
+font-weight: 700;
+}

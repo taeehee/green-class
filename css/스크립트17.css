@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import url('reset.css');
+
+body {
+    height: 3000px;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(253, 166, 181);
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: aliceblue;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100px; 
+    transition: top 0.7s;
+}
+
+.header.active {
+    top: -100px; /* 헤더높이px만큼 벗어나도록 */
+}

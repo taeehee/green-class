@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션스타일변경</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/03.css"> <!-- 스타일link태그는 복붙link태그 밑에 쓰는게 좋음 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+         window.onload = () => {
+            var swiper = new Swiper(".sec01-swiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        }); 
+    }; //script end
+    </script>
+</head>
+
+<body>
+    <section class="section-01">
+
+        <div class="swiper sec01-swiper"> <!-- Navigation Swiper --> <!-- my syiper만 이름변경할 수 있음 -->
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/hotel-lijoteu-geoui-bada-bada-haebyeon-eseo-aleum-daun-yaoe-suyeongjang.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                
+                <div class="swiper-slide">
+                    <img src="img/huin-guleum-puleun-haneulgwa-copyspacewa-aleumdaun-yeoldae-haebyeon-bada-bada.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-eumsiggwa-hwang-geum-pokeuwa-naipeuga-issneun-du-jeobsiui-sangdan-bogi.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                
+                <div class="swiper-slide">
+                    <img src="img/keto-daieoteu-sigpumgwa-abokadoga-issneun-pyeongpyeonghan-jeobsi.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                
+                <div class="swiper-slide">
+                    <img src="img/aenimeisyeon-mujigae-pung-gyeong.jpg" alt="">
+                </div><!-- swiper-slide end -->
+                
+            </div><!--swiper-wrapper end  -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div><!-- Navigation Swiper end -->
+    </section><!-- section-01 end -->
+</body>
+
+</html>
