@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import url('reset.css');
+
+html,
+body {
+    font-size: 10px;
+}
+
+/* 편리한 rem계산을 위해 최상위 선택자에게 
+font-size:10px로 초기값을 설정한다. */
+/* px대신 rem쓰는 이유: 웹 접근성, 반응형 */
+
+.text {
+    width: 40rem;
+    font-size: 3rem;
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+
+.title h2 {
+    font-size: 6rem;
+}
+
+.title p {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 960px) {
+    html,
+    body {
+        /* font-size: 8px; */
+        font-size: 50%;
+    }
+    /* 초기값 기준인 10px -> 8px 기준으로 바뀌어,
+    수치가 자동 계산되어 적용됨. */
+
+    .title h2 {}
+    .title p {}
+
+}/* 960px */
+
+
+
+@media screen and (max-width: 480px) {
+    html,
+    body {
+        /* font-size: 6px; */
+        font-size: 37.5%;
+    }
+    /* 초기값 기준인 10px -> 6px 기준으로 바뀌어,
+    수치가 자동 계산되어 적용됨. */
+
+    .title h2 {}
+    .title p {
+        /* font-size: 14px;  (12px이지만 본문에서 12px사용은 좋지않으므로 14px로 고정) */
+        font-size: 2.33rem;
+        /* 14 / 6 -> 2.33 */
+    }
+
+}/* 480px */

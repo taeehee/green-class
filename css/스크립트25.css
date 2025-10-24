@@ -1,0 +1,63 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.menu-01 {
+    margin: 100px;
+    position: relative; /* menu_bar의 기준 */
+}
+
+.menu-01 ul {
+    height: 50px;
+    display: flex;
+}
+
+.menu-01 ul li {
+    width: 100px;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 50px;
+}
+
+.menu-01 .menu_bar {
+    width: 100px;
+    height: 3px;
+    background-color: blueviolet;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-01 .menu_bar span {
+    position: absolute;
+    left: -999999px;
+    /* 정보는 읽히는데 눈에 안보이도록 하기위해서 */
+}
+
+.menu-02 {
+    margin: 100px;
+    position: relative; /* menu_bar기준 */
+}
+.menu-02 ul {
+    display: flex;
+}
+.menu-02 ul li {
+    height: 50px;
+    border: 1px solid #333;
+    padding: 0 30px;
+    line-height: 50px;
+}
+
+.menu-02 .menu_bar  {
+    width: 100px;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.menu-02 .menu_bar span {
+    position: absolute;
+    left: -999999px;
+    /* 정보는 읽히는데 눈에 안보이도록 하기위해서 */
+}

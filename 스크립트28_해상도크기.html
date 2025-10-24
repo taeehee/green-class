@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>해상도크기</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/스크립트28.css">
+
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            //화면의 크기가 960px미만일 때 스와이퍼슬라이드 구현
+            //$(window).width() 화면크기
+
+            if ($(window).width() < 960) { /* 960px(X) 숫자만 입력 */
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        };
+
+        });//script end
+    </script>
+</head>
+
+<body>
+    <section class="section">
+        <h2>슬라이드</h2>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="img/img-7.jpg" alt="">
+                    <strong>슬라이드 1</strong>
+                </div><!-- swiper-slide -->
+
+                <div class="swiper-slide">
+                    <img src="img/img-8.jpg" alt="">
+                    <strong>슬라이드 2</strong>
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/img-9.jpg" alt="">
+                    <strong>슬라이드 3</strong>
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/img-10.jpg" alt="">
+                    <strong>슬라이드 4</strong>
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/img-1.jpg" alt="">
+                    <strong>슬라이드 5</strong>
+                </div><!-- swiper-slide -->
+                <div class="swiper-slide">
+                    <img src="img/img-2.jpg" alt="">
+                    <strong>슬라이드 6</strong>
+                </div><!-- swiper-slide -->
+
+            </div><!-- swiper-wrapper -->
+            <div class="swiper-pagination"></div>
+        </div><!-- swiper mySwiper -->
+    </section><!-- section -->
+
+</body>
+
+</html>

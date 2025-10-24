@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>움직이는 메뉴바</title>
+    <link rel="stylesheet" href="css/스크립트25.css">
+    <script src="lib/jquery-3.7.1.min.js"></script>
+    <script>
+        $(function () {
+            //.menu-01 ul li에 마우스를 올렸을 때 실행
+            //마우스 좌표값을 찾는다. 얼만큼씩 이동하는지(li의 w값))
+            //-> position().left : 부모를 기준으로 x축의 좌표값 확인
+            //-> position().top : y축 좌표값 확인
+
+            $('.menu-01 ul li').on('mouseenter touchstart', function () {
+                //콘솔 확인 console.log($(this).position().left)
+                let moveLeft = $(this).position().left;
+                $('.menu-01 .menu_bar').stop().animate({
+                    'left': moveLeft
+                });
+            });
+
+
+            // <2.너비값이 다른 메뉴바>
+            //outerWidth() 패딩 + 테두리 포함된 너비값 찾기
+
+            //.menu-02 ul li에게 마우스 올렸을 때 실행
+            //.menu-02 .menu_bar에게 animate 적용
+            //left값과 width값 적용
+            //left -> 마우스 올린요소 ($(this))의 x축 좌표값
+            //width -> 마우스 올린요소 ($(this))의 너비
+
+            let menuWidth = $('.menu-02 ul li:first').outerWidth()
+            $('.menu-02 .menu_bar').width(menuWidth);
+
+            $('.menu-02 ul li').on('mouseenter', function () {
+                //콘솔 확인 console.log($(this).position().left)
+                let moveLeft = $(this).position().left;
+                let moveWidth = $(this).outerWidth();
+                $('.menu-02 .menu_bar').stop().animate({
+                    'left' : moveLeft,
+                    'width' : moveWidth
+                });
+
+            });
+
+        });//script end
+    </script>
+</head>
+
+<body>
+    <div class="menu-01">
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+
+        <div class="menu_bar">
+            <span>메뉴바</span>
+        </div><!-- menu_bar -->
+    </div><!-- menu-01 -->
+
+    <div class="menu-02">
+        <ul>
+            <li>뉴스스탠드</li>
+            <li>언론사편집</li>
+            <li>엔터</li>
+            <li>스포츠</li>
+            <li>경제</li>
+        </ul>
+
+        <div class="menu_bar">
+            <span>메뉴바</span>
+        </div><!-- menu_bar -->
+    </div><!-- menu-02 -->
+</body>
+
+</html>

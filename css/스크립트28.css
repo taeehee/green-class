@@ -1,0 +1,46 @@
+@charset "utf-8";
+@import url('reset.css');
+
+.section {
+    margin: 100px;
+}
+
+.section h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+section .swiper-wrapper {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 40px;
+}
+
+.section .swiper-wrapper .swiper-slide {
+    width: 32%;
+}
+
+.section .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+
+/* 화면의 크기가 959px이하일 때 적용 */
+/* .section .swiper-wrapper에게 flex-wrap: nowrap */
+@media screen and (max-width: 959px) {
+    .section .swiper-wrapper {
+        flex-wrap: nowrap;
+    }
+}/* 959px */
+    
+/* rem
+html이 가진 font-size를 기준으로 크기 조절
+html {font-size: 16px} 
+.item {
+    margin: 2rem;
+    =>margin: 32px;
+}*/
+

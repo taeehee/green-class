@@ -1,0 +1,41 @@
+@import url("reset.css");
+.section {
+  max-width: 1280px;
+  width: calc(100% - 40px);
+  margin: 100px auto;
+  /* .inner */
+  /* 640px */
+}
+.section h2 {
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+.section .list {
+  display: flex;
+  justify-content: space-between;
+}
+.section .list .item {
+  width: 32%;
+}
+.section .list .item:first-child {
+  background-color: aqua;
+}
+.section .list .item .image {
+  height: 400px;
+}
+.section .list .item .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 640px) {
+  .section .list {
+    flex-wrap: wrap;
+  }
+  .section .list .item {
+    width: 100%;
+  }
+}
+
+/* .section *//*# sourceMappingURL=52.css.map */
