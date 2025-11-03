@@ -14,9 +14,10 @@ body{
     color: rgb(0, 0, 0);
 }
 
-.header.active {
+.header.active{
     background-color: aliceblue;
 }
+
 
 .header .inner {
     max-width: 1280px;
